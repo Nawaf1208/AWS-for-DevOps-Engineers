@@ -310,3 +310,100 @@ $\color{green}{\text{Answer}}$
     ```
 
 </details>
+
+## S3
+
+<details>
+<summary><b><i>7.Create buckets
+
+Create the following buckets:
+
+Private bucket
+  - eu-west-2 region
+  - Upload a single file to the bucket. Any file.
+
+Public bucket
+  - eu-west-1 region
+  - Versioning should be enabled
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+For the first bucket:
+
+1. Go to S3 service in the AWS console. If not in buckets page, click on "buckets" in the left side menu
+
+2. Click on "Create bucket"
+
+3. Give a globally unique name for your bucket
+
+4. Choose the region "eu-west-2"
+
+5. Click on "Create bucket"
+
+6. Click on the bucket name
+
+7. Under "objects" click on "Upload" -> "Add files" -> Choose file to upload -> Click on "Upload"
+
+8. For the second bucket:
+
+Go to S3 service in the AWS console. If not in buckets page, click on "buckets" in the left side menu
+
+1. Click on "Create bucket"
+
+2. Give a globally unique name for your bucket
+
+3. Choose the region "eu-west-1"
+
+4. Make sure to uncheck the box for "Private bucket" to make it public
+
+5. Make sure to check the enable box for "Bucket Versioning"
+
+6. Click on "Create bucket"
+
+Solution using Terraform:
+```Terraform
+resource "aws_s3_bucket" "private_bucket" {
+  bucket = "my-first-private-bucket"
+  region = "eu-west-2"
+  acl = "private" 
+
+  tags = {
+    Name        = "My First Private Bucket"
+    Environment = "Exercise"
+  }
+}
+
+resource "aws_s3_bucket_acl" "private_bucket_acl" {
+  bucket = aws_s3_bucket.private_bucket.id
+  acl    = "private"
+}
+
+resource "aws_s3_bucket" "public_bucket" {
+  bucket = "my-first-public-bucket"
+  region = "eu-west-1"
+
+  tags = {
+    Name        = "My First Public Bucket"
+    Environment = "Exercise"
+  }
+
+  versioning {
+    enabled = true
+  }
+}
+
+resource "aws_s3_bucket_acl" "public_bucket_acl" {
+  bucket = aws_s3_bucket.public_bucket.id
+  acl    = "public-read"
+}
+
+resource "aws_s3_bucket_object" "bucket_object" {
+  bucket   = "my-first-private-bucket"
+  key      = "some_object_key"
+  content  = "object content"
+}
+```
+
+</details>
