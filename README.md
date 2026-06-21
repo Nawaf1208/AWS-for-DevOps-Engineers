@@ -401,11 +401,11 @@ $\color{green}{\text{Answer}}$
 <details>
 <summary><b><i>9.Spot Instances
 
-1. Create two Spot instances using a Spot Request with the following properties:
+Create two Spot instances using a Spot Request with the following properties:
    - Amazon Linux 2 AMI
    - 2 instances as target capacity (at any given point of time) while each one has 2 vCPUs and 3 GiB RAM
 
-2. Create a single Spot instance using Amazon Linux 2 and t2.micro
+Create a single Spot instance using Amazon Linux 2 and t2.micro
 
 </i></b></summary>
 
