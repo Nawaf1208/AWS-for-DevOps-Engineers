@@ -313,10 +313,95 @@ $\color{green}{\text{Answer}}$
 
 </details>
 
+<details>
+<summary><b><i>7.Security Groups
+
+For this exercise you'll need:
+1. EC2 instance with web application
+2. Security group inbound rules that allow HTTP traffic
+
+- List the security groups you have in your account, in the region you are using
+- Remove the HTTP inbound traffic rule
+- Can you still access the application? What do you see/get?
+- Add back the rule
+- Can you access the application now?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Console:
+
+1. Go to EC2 service - > Click on "Security Groups" under "Network & Security" You should see at least one security group. One of them is called "default"\
+
+2. Click on the security group with HTTP rules and click on "Edit inbound rules". Remove the HTTP related rules and click on "Save rules"
+
+3. No. There is a time out because we removed the rule allowing HTTP traffic.
+
+4. Click on the security group -> edit inbound rules and add the following rule:
+   - Type: HTTP
+   - Port range: 80
+   - Source: Anywhere -> 0.0.0.0/0
+
+5. Yes
+
+CLI:
+
+1. `aws ec2 describe-security-groups` -> by default, there is one security group called "default", in a new account
+
+2. Remove the rule:
+   ```
+   aws ec2 revoke-security-group-ingress \
+    --group-name someHTTPSecurityGroup
+    --protocol tcp \
+    --port 80 \
+    --cidr 0.0.0.0/0
+   ```
+
+3. No. There is a time out because we removed the rule allowing HTTP traffic.
+
+4. Add the rule we remove:
+   ```
+   aws ec2 authorize-security-group-ingress \
+    --group-name someHTTPSecurityGroup
+    --protocol tcp \
+    --port 80 \
+    --cidr 0.0.0.0/0
+   ```
+
+5. Yes
+
+</details>
+
+<details>
+<summary><b><i>8.IAM Roles
+
+1. Running EC2 instance without any IAM roles (so you if you connect the instance and try to run AWS commands, it fails)
+2. IAM role with "IAMReadOnlyAccess" policy
+
+- Attach a role (and if such role doesn't exists, create it) with "IAMReadOnlyAccess" policy to the EC2 instance
+- Verify you can run AWS commands in the instance
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to EC2 service
+
+2. Click on the instance to which you would like to attach the IAM role
+
+3. Click on "Actions" -> "Security" -> "Modify IAM Role"
+
+4. Choose the IAM role with "IAMReadOnlyAccess" policy and click on "Save"
+
+5. Running AWS commands now in the instance should work fine (e.g. `aws iam list-users`)
+
+</details>
+
 ### S3
 
 <details>
-<summary><b><i>7.Create buckets
+<summary><b><i>Create buckets
 
 Create the following buckets:
 
