@@ -448,6 +448,44 @@ Create a single Spot instance:
 
 </details>
 
+<details>
+<summary><b><i>10.Elastic IP
+
+An EC2 instance with public IP (not elastic IP)
+
+- Write down the public IP of your EC2 instance somewhere and stop & start the instance. Does the public IP address is the same? why?
+- Handle this situation so you have the same public IP even after stopping and starting the instance
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to EC2 service -> Instances
+
+2. Write down current public IP address
+
+3. Click on "Instance state" -> Stop instance -> Stop
+
+4. Click on "Instance state" -> Start Instance
+
+5. Yes, the public IP address has changed
+
+6. Let's use an Elastic IP address
+
+7. In EC2 service, under "Network & Security" click on "Elastic IP"
+
+8. Click on the "Allocate elastic IP address" button
+
+9. Make sure you select "Amazon's pool of IPv4 addresses" and click on "Allocate"
+
+10. Click on "Actions" and then "Associate Elastic IP address" 1. Select "instance", choose your instance and provide its private IP address 2. Click on "Associate"
+
+11. Now, if we go back to the instance page, we can see it is using the Elastic IP address as its public IP
+
+Note: to remove it, use "disassociate" option and don't forget to also release it so you won't be billed.
+
+</details>
+
 ### S3
 
 <details>
