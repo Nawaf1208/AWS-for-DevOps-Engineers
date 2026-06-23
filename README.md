@@ -520,7 +520,7 @@ Create another placement group:
 
 4. Give it a name and choose the "Spread" placement strategy because the requirement is high availability as top priority
 
-5.Click on "Create group"
+5. Click on "Create group"
 
 </details>
 
