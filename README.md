@@ -524,6 +524,78 @@ Create another placement group:
 
 </details>
 
+<details>
+<summary><b><i>12.Elastic Network Interfaces
+
+An EC2 instance with network interface
+
+- Create a network interface and attach it to the EC2 instance that already has one network interface
+- Explain why would anyone use two network interfaces
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Create a network inferface:
+
+1. Go to EC2 service
+
+2. Click on "Network Interfaces" under "Network & Security"
+
+3. Click on "Create network interface"
+
+4. Provide a description
+
+5. Choose a subnet (one that is in the AZ as the instance)
+
+6. Optionally attach a security group and click on "Create network interface"
+
+7. Click on "Actions" -> "Attach" and choose the instance to attach it to
+
+8. If you go now to "Instances" page you'll see your instance has two network interfaces
+
+Why two interfaces:
+
+You can move the second network interface between instances. This allows us to create kind of a failover mechanism between the instances.
+
+</details>
+
+<details>
+<summary><b><i>13.Hibernate an Instance
+
+- Create an instance that supports hibernation
+- Hibernate the instance
+- Start the instance
+- What way is there to prove that instance was hibernated from OS perspective?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Create an instance that supports hibernation
+
+2. Go to EC2 service
+
+3. Go to instances and create an instance
+
+4. In "Configure instance" make sure to check "Enable hibernation as an additional stop behavior"
+
+5. In "Add storage", make sure to encrypt EBS and make sure the size > instance RAM size (because hibernation saves the RAM state)
+
+6. Review and Launch
+
+7. Hibernate the instance
+
+8. Go to the instance page
+
+9. Click on "Instance state" -> "Hibernate instance" -> Hibernate
+
+10. Instance state -> Start
+
+11. Run the "uptime" command, which will display the amount of time the system was up
+
+</details>
+
 ### S3
 
 <details>
