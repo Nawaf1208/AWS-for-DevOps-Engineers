@@ -682,10 +682,77 @@ Create a volume:
 
 </details>
 
+<details>
+<summary><b><i>16.Create an AMI
+
+One running EC2 instance
+
+- Make some changes in the operating system of your instance (create files, modify files, ...)
+- Create an AMI image from running EC2 instance
+- Launch a new instance using the custom AMI you've created
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Connect to your EC2 instance (ssh, console, ...)
+
+2. Make some changes in the operating system
+
+3. Go to EC2 service
+
+4. Right click on the instance where you made some changes -> Image and templates -> Create image
+
+5. Give the image a name and click on "Create image"
+
+6. Launch new instance and choose the image you've just created
+
+</details>
+
+<details>
+<summary><b><i>17.Create EFS
+
+Two EC2 instances in different availability zones
+
+- Create an EFS with the following properties
+- Set lifecycle management to 60 days
+- The mode should match a use case of scaling to high levels of throughput and I/O operations per second
+- Mount the EFS in both of your EC2 instances
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to EFS console
+
+2. Click on "Create file system"
+
+3. Create on "customize"
+
+4. Set lifecycle management to "60 days since last access"
+
+5. Set Performance mode to "MAX I/O" due to the requirement of "Scaling to high levels of throughput"
+
+6. Click on "Next"
+
+7. Choose security group to attach (if you don't have any, create one and make sure it has a rule to allow NFS traffic) and click on "Next" until you are able to review and create it
+
+8. SSH into your EC2 instances
+
+9. Run `sudo yum install -y amazon-efs-utils`
+
+10. Run `mkdir efs`
+
+11. If you go to your EFS page and click on "Attach", you can see what ways are there to mount your EFS on your instancess
+
+12. The command to mount the EFS should be similar to `sudo mount -t efs -o tls <EFS name>:/ efs` - copy and paste it in your ec2 instance's OS
+
+</details>
+
 ### S3
 
 <details>
-<summary><b><i>Create buckets
+<summary><b><i>18.Create buckets
 
 Create the following buckets:
 
