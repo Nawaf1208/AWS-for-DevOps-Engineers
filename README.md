@@ -596,6 +596,92 @@ $\color{green}{\text{Answer}}$
 
 </details>
 
+<details>
+<summary><b><i>14.EBS Volume Creation
+
+One EC2 instance that you can get rid of
+
+- Create a volume in the same AZ as your instance, with the following properties:
+  - gp2 volume type
+  - 4 GiB size
+- Once created, attach it to your EC2 instance
+- Remove your EC2 instance. What happened to the EBS volumes attached to the EC2 instance?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to EC2 service
+
+2. Click on "Volumes" under "Elastic Block Store"
+
+3. Click on "Create Volume"
+4. Select the following properties
+
+5. gp2 volume type
+
+6. 4 GiB size
+
+7. The same AZ as your instance
+
+8. Click on "Create volume"
+
+9. Right click on the volume you've just created -> attach volume -> choose your EC2 instance and click on "Attach"
+
+10. Terminate your instance
+
+11. The default EBS volume (created when you launched the instance for the first time) will be deleted (unless you didn't check "Delete on termination"), but the volume you've created as part of this exercise, will remain
+
+Note: don't forget to remove the EBS volume you've created in this exercise
+
+</details>
+
+<details>
+<summary><b><i>15.EBS Snapshots
+
+EBS Volume
+
+- Create a snapshot of an EBS volume
+- Verify the snapshot was created
+- Move the data to another region
+- Create a volume out of it in a different AZ
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Create a snapshot:
+
+1. Go to EC2 service
+
+2. Click on "Volumes" under "Elastic Block Store"
+
+3. Right click on the chosen volume -> Create snapshot
+
+4. Insert a description and click on "Create Snapshot"
+
+Verify the snapshot:
+
+1. Click on "Snapshots" under "Elastic Block Store"
+
+2. You should see the snapshot you've created
+
+Move the data:
+
+1. Select the snapshot and click on Actions -> Copy
+
+2. Select a region to where the snapshot will be copied
+
+Create a volume:
+
+1. Select the snapshot and click on Actions -> Create volume
+
+2. Choose a different AZ
+
+3. Click on "Create Volume"
+
+</details>
+
 ### S3
 
 <details>
