@@ -6,7 +6,7 @@
 
 ## Exercises
 
-### IAM
+## IAM
 
 <details>
 <summary><b><i>1.Create a User
@@ -206,7 +206,7 @@ Note: Access Advisor can be good to evaluate whether there are services the user
 
 </details>
 
-### EC2
+## EC2
 
 <details>
 <summary><b><i>6.Launch EC2 Web Instance
@@ -749,7 +749,7 @@ $\color{green}{\text{Answer}}$
 
 </details>
 
-### S3
+## S3
 
 <details>
 <summary><b><i>18.Create buckets
