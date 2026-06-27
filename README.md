@@ -857,6 +857,7 @@ Create an application load balancer for the two instances you have, with the fol
   - healthy threshold: 3
   - unhealthy threshold: 3
   - interval: 10 seconds
+
 Verify load balancer is working (= you get reply from both instances at different times)
 
 </i></b></summary>
@@ -908,6 +909,7 @@ Create an application load balancer for the two instances you have, with the fol
   - healthy threshold: 3
   - unhealthy threshold: 3
   - interval: 10 seconds
+
 Create another target group for the third instance
 Traffic should be forwarded to this group based on the "/test" path
 
@@ -972,6 +974,7 @@ Create a network load balancer:
   - healthy threshold: 3
   - unhealthy threshold: 3
   - interval: 10 seconds
+
 Listener should be using TCP protocol on port 80
 
 </i></b></summary>
