@@ -1510,12 +1510,14 @@ $\color{green}{\text{Answer}}$
 <details>
 <summary><b><i>30.Health Checks
 
-- 3 web instances in different AZs.
-- For each instance create a health checks with the following properties:
-- Name it after the AZ where the instance resides
-- Failure threshold should be 5
-- Edit the security group of one of your instances and remove HTTP rules.
-- Did it change the status of the health check?
+3 web instances in different AZs.
+
+For each instance create a health checks with the following properties:
+  - Name it after the AZ where the instance resides
+  - Failure threshold should be 5
+  - Edit the security group of one of your instances and remove HTTP rules.
+
+Did it change the status of the health check?
 
 </i></b></summary>
 
