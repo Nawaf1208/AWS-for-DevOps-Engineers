@@ -1284,3 +1284,152 @@ output "NewSubnet3-id" {
 ```
 
 </details>
+
+## Databases
+
+<details>
+<summary><b><i>26.MySQL DB
+
+Create a MySQL database with the following properties:
+  - Instance type: db.t2.micro
+  - gp2 storage
+  - Storage Auto scaling should be enabled and threshold should be set to 500 GiB
+  - Public access should be enabled
+  - Port should be set to 3306
+  - DB name: 'db'
+  - Backup retention: 10 days
+
+Create read replica for the database you've created
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to RDS service
+
+2. Click on "Databases" in the left side menu and click on the "Create database" button
+
+3. Choose "standard create"
+
+4. Choose "MySQL" and the recommended version
+
+5. Choose "Production" template
+
+6. Specify DB instance identifier
+
+7. Specify Credentials (master username and password)
+
+8. Choose DB instance type: Burstable classes, db.t2.micro
+
+9. Choose "gp2" as storage
+
+10. Enable storage autoscalling: maximum storage threshold of 500 GiB
+
+11. Choose "Do not create a standby instance"
+
+12. Choose a default VPC and subnet
+
+13. Check "Yes" for public access
+
+14. Choose "No preference" for AZ
+
+15. Database port should be 3306
+
+16. For authentication, choose "Password and IAM database authentication"
+
+17. Set initial database name as "db"
+
+18. Increase backup retention period to 10 days
+
+19. Click on "Create database" button
+
+20. Go to the database under "Databases" in the left side menu
+
+21. Click on "Actions" -> Create read replica
+
+22. Click on "Create read replica"
+
+</details>
+
+<details>
+<summary><b><i>27.Aurora DB
+  
+Create an Aurora database with the following properties:
+  - Edition: MySQL
+  - Instance type: db.t3.small
+  - A reader node in a different AZ
+  - Public access should be enabled
+  - Port should be set to 3306
+  - DB name: 'db'
+  - Backup retention: 10 days
+
+How many instances does your DB cluster has?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to RDS service
+
+2. Click on "Databases" in the left side menu and click on the "Create database" button
+
+3. Choose "standard create"
+
+4. Choose "Aurora DB"
+
+5. Choose "MySQL" edition and "Provisioned" as capacity type
+
+6. Choose "single-master"
+
+7. Specify Credentials (master username and password)
+
+8. Choose DB instance type: Burstable classes, db.t3.small
+
+9. Choose "Create an Aurora Replica or Reader node in a different AZ"
+
+10. Choose a default VPC and subnet
+
+11. Check "Yes" for public access
+
+12. Database port should be 3306
+
+13. For authentication, choose "Password and IAM database authentication"
+
+14. Set initial database name as "db"
+
+15. Increase backup retention period to 10 days
+
+16. Click on "Create database" button
+
+17. Two instances - one reader and one writer
+
+</details>
+
+<details>
+<summary><b><i>28.ElastiCache
+
+Create ElastiCache Redis:
+  - Instance type should be "cache.t2.micro"
+  - Replicas should be 0
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to ElastiCache service
+
+2. Click on "Get Started Now"
+
+3. Choose "Redis"
+
+4. Insert a name and description
+
+5. Choose "cache.t2.micro" an node type
+
+6. Set number of replicas to 0
+
+7. Create new subnet group
+
+8. Click on "Create"
+
+</details>
