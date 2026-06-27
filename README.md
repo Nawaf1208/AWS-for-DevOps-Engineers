@@ -1016,3 +1016,119 @@ $\color{green}{\text{Answer}}$
 17. Click on "Create load balancer" and wait for it to be provisioned
 
 </details>
+
+## Auto Scaling Groups
+
+<details>
+<summary><b><i>22.Basics
+
+Zero EC2 instances running
+
+Create a scaling group for web servers with the following properties:
+  - Amazon Linux 2 AMI
+  - t2.micro as the instance type
+  - user data:
+    ```
+    yum install -y httpd
+    systemctl start httpd
+    systemctl enable httpd
+    ```
+
+Were new instances created since you created the auto scaling group? How many? Why? 
+
+Change desired capacity to 2. Did it launch more instances?
+
+Change back the desired capacity to 1. What is the result of this action?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Create a scaling group:
+
+1. Go to EC2 service
+
+2. Click on "Auto Scaling Groups" under "Auto Scaling"
+
+3. Click on "Create Auto Scaling Group"
+
+4. Insert a name
+
+5. Click on "Create a launch template"
+
+6. Insert a name and a version for the template
+
+7. Select an AMI to use (Amazon Linux 2)
+
+8. Select t2.micro instance type
+
+9. Select a key pair
+
+10. Attach a security group
+
+11. Under "Advanced" insert the user data
+
+12. Click on "Create"
+
+13. Choose the launch template you've just created and click on "Next"
+
+14. Choose "Adhere to launch template"
+
+15. Choose in which AZs to launch and click on "Next"
+
+16. Link it to ALB (if you don't have one, create it)
+
+17. Mark ELB health check in addition to EC2. Click on "Next" until you reach the review page and click on "Create auto scaling group"
+
+One instance was launched to met the criteria of the auto scaling group we've created. The reason it launched only one is due to "Desired capacity" set to 1. 
+
+Change it by going to your auto scaling group -> Details -> Edit -> "2 desired capacity". This should create another instance if only one is running 
+
+Reducing desired capacity back to 1 will terminate one of the instances (assuming 2 are running).
+
+</details>
+
+<details>
+<summary><b><i>23.Dynamic Scaling Policy
+
+Existing Auto Scaling Group with maximum capacity set to at least 3
+
+One running EC2 instance with max of 4 CPUs
+
+Create a dynamic scaling policy with the following properties:
+  - Track average CPU utilization
+  - Target value should be 70%
+  - Increase the CPU utilization to at least 70%
+    
+Do you see change in number of instances?
+
+Decrease CPU utilization to less than 70%
+
+Do you see change in number of instances?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to EC2 service -> Auto Scaling Groups and click on the tab "Automating scaling"
+
+2. Choose "Target tracking scaling" under "Policy Type"
+
+3. Set metric type to Average CPU utilization
+
+4. Set target value to 70% and click on "Create"
+
+5. If you are using Amazon Linux 2, you can stress the instance with the following:
+   ```
+   sudo amazon-linux-extras install epel -y
+   sudo yum install stress -y
+   stress -c 4  # assuming you have 4 CPUs
+   ```
+
+Yes, additional EC2 instance was added
+
+Simply stop the stress command
+
+Yes, one of the EC2 instances was terminated
+
+</details>
