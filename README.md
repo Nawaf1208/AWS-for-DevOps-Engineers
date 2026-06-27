@@ -1433,3 +1433,195 @@ $\color{green}{\text{Answer}}$
 8. Click on "Create"
 
 </details>
+
+## DNS
+
+<details>
+<summary><b><i>28.Register Domain
+
+Note: registering domain costs money. Don't do this exercise, unless you understand that you are going to register a domain and it's going to cost you money.
+
+- Register your own custom domain using AWS Route 53
+- What is the type of your domain?
+- How many records your domain has?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to Route 53 service page
+
+2. Click in the menu on "Registered Domains" under "Domains"
+
+3. Click on "Register Domain"
+
+4. Insert your domain
+
+5. Check if it's available. If it is, add it to the cart
+
+Note: registering domain costs money. Don't click on "continue", unless you understand that you are going to register a domain and it's going to cost you money.
+
+6. Click on "Continue" and fill in your contact information
+
+7. Choose if you want to renew it in the future automatically. Accept the terms and click on "Complete Order"
+
+8. Go to hosted zones and you should see there your newly registered domain
+
+9. The domain type is "Public"
+
+10. The domain has 2 DNS records: NS and SOA
+
+</details>
+
+<details>
+<summary><b><i>29.Creating Records
+
+At least one registered domain
+
+Create the following record for your domain:
+  - Record name: foo
+  - Record type: A
+  - Set some IP in the value field
+
+Verify from the shell that you are able to use the record you've created to lookup for the IP address by using the domain name
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to Route 53 service -> Hosted zones
+
+2. Click on your domain name
+
+3. Click on "Create record"
+
+4. Insert "foo" in "Record name"
+
+5. Set "Record type" to A
+
+6. In "Value" insert "201.7.20.22"
+
+7. Click on "Create records"
+
+8. In your shell, type `nslookup foo.<YOUR DOMAIN>` or `dig foo.<YOUR NAME>`
+
+</details>
+
+<details>
+<summary><b><i>30.Health Checks
+
+- 3 web instances in different AZs.
+- For each instance create a health checks with the following properties:
+- Name it after the AZ where the instance resides
+- Failure threshold should be 5
+- Edit the security group of one of your instances and remove HTTP rules.
+- Did it change the status of the health check?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to Route 53
+
+2. Click on "Health Checks" in the left-side menu
+
+3. Click on "Create health check"
+
+4. Insert the name: us-east-2
+
+5. What to monitor: endpoint
+
+6. Insert the IP address of the instance
+
+7. Insert the endpoint /health if your web instance supports that endpoint
+
+8. In advanced configuration, set Failure threshold to 5
+
+9. Click on "next" and then on "Create health check"
+
+10. Repeat steps 1-9 for the other two instances you have
+
+11. Go to security group of one of your instances
+
+12. Click on "Actions" -> Edit inbound rules -> Delete HTTP based rules
+
+13. Go back to health checks page and after a couple of seconds you should see that the status becomes "unhealthy"
+
+</details>
+
+<details>
+<summary><b><i>31.Failover
+
+A running EC2 web instance with an health check defined for it in Route 53
+
+- Create a failover record that will failover to another record if an health check isn't passing
+- Make sure TTL is 30
+- Associate the failover record with the health check you have
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to Route 53 service
+
+2. Click on "Hosted Zones" in the left-side menu
+
+3. Click on your hosted zone
+
+4. Click on "Created record"
+
+5. Insert "failover" in record name and set record type to A
+
+6. Insert the IP of your instance
+
+7. Set the routing policy to failover
+
+8. Set TTL to 30
+
+9. Associate with an health check
+
+10. Add another record with the same properties as the previous one
+
+11. Click on "Create records"
+
+12. Go to your EC2 instance and edit its security group to remove the HTTP rules
+
+13. Use your web app and if you print the hotsname of your instance then you will notice, a failover was performed and a different EC2 instance is used
+
+</details>
+
+## Containers
+
+<details>
+<summary><b><i>32.Run Tasks
+
+Note: This costs money
+
+- Create a task in ECS to launch in Fargate.
+- The task itself can be a sample app.
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to Elastic Container Service page
+
+2. Click on "Get Started"
+
+3. Choose "sample-app"
+
+4. Verify it's using Farget and not ECS (EC2 Instance) and click on "Next"
+
+5. Select "None" in Load balancer type and click on "Next"
+
+6. Insert cluster name (e.g. my_cluster) and click on "Next"
+
+7. Review everything and click on "Create"
+
+8. Wait for everything to complete
+
+9. Go to clusters page and check the status of the task (it will take a couple of seconds/minutes before changing to "Running")
+
+10. Click on the task and you'll see the launch type is Fargate
+
+</details>
