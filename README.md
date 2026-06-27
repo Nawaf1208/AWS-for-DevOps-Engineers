@@ -1132,3 +1132,155 @@ Simply stop the stress command
 Yes, one of the EC2 instances was terminated
 
 </details>
+
+## VPC
+
+<details>
+<summary><b><i>24.My First VPC
+
+Create a new VPC:
+  - It should have a CIDR that supports using at least 60,000 hosts
+  - It should be named "exercise-vpc"
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Under "Virtual Private Cloud" click on "Your VPCs"
+
+2. Click on "Create VPC"
+
+3. Insert a name - "exercise-vpc"
+
+4. Insert IPv4 CIDR block: 10.0.0.0/16
+
+5. Keep "Tenancy" at Default
+
+6. Click on "Create VPC"
+
+Solution using Terraform:
+```Terraform
+resource "aws_vpc" "exercise-vpc" {
+  cidr_block       = "10.0.0.0/16"
+
+  tags = {
+    Name = "exercise-vpc"
+  }
+}
+
+output "vpc-id" {
+  value = aws_vpc.exercise-vpc.id
+}
+```
+
+</details>
+
+<details>
+<summary><b><i>25.Subnets
+
+Single newly created VPC
+
+Region with more than two availability zones
+
+Create a subnet in your newly created VPC:
+  - CIDR: 10.0.0.0/24
+  - Name: NewSubnet1
+
+Create additional subnet:
+  - CIDR: 10.0.1.0/24
+  - Name: NewSubnet2
+  - Different AZ compared to previous subnet
+
+Create additional subnet:
+  - CIDR: 10.0.2.0/24
+  - Name: NewSubnet3
+  - Different AZ compared to previous subnet
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Click on "Subnets" under "Virtual Private Cloud"
+
+2. Make sure you filter by your newly created VPC (to not see the subnets in all other VPCs). You can do this in the left side menu
+
+3. Click on "Create subnet"
+
+4. Choose your newly created VPC
+
+5. Set the subnet name to "NewSubnet1"
+
+6. Choose AZ
+
+7. Set CIDR to 10.0.0.0/24
+
+8. Click on "Add new subnet"
+
+9. Set the subnet name to "NewSubnet2"
+
+10. Choose a different AZ
+
+11. Set CIDR to 10.0.1.0/24
+
+12. Click on "Add new subnet"
+
+13. Set the subnet name to "NewSubnet3"
+
+14. Choose a different AZ
+
+15. Set CIDR to 10.0.2.0/24
+
+Solution using Terraform
+```Terraform
+# Variables
+
+variable "vpc_id" {
+  type = string
+}
+
+# AWS Subnets
+
+resource "aws_subnet" "NewSubnet1" {
+  cidr_block = "10.0.0.0/24"
+  vpc_id = var.vpc_id
+  availability_zone = data.aws_availability_zones.all.names[0]
+  tags = {
+    Purpose: exercise
+    Name: "NewSubnet1"
+  }
+}
+
+resource "aws_subnet" "NewSubnet2" {
+  cidr_block = "10.0.1.0/24"
+  vpc_id = var.vpc_id
+  availability_zone = data.aws_availability_zones.all.names[1]
+  tags = {
+    Purpose: exercise
+    Name: "NewSubnet2"
+  }
+}
+
+resource "aws_subnet" "NewSubnet3" {
+  cidr_block = "10.0.2.0/24"
+  vpc_id = var.vpc_id
+  availability_zone = data.aws_availability_zones.all.names[2]
+  tags = {
+    Purpose: exercise
+    Name: "NewSubnet3"
+  }
+}
+
+# Outputs
+
+output "NewSubnet1-id" {
+  value = aws_subnet.NewSubnet1.id
+}
+output "NewSubnet2-id" {
+  value = aws_subnet.NewSubnet2.id
+}
+output "NewSubnet3-id" {
+  value = aws_subnet.NewSubnet3.id
+}
+```
+
+</details>
