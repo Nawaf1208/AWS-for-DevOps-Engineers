@@ -1979,3 +1979,114 @@ Deploy the Project:
 5. Go to Lambda console and you will see a new lambda function called `SampleLambda` created in your account.
 
 </details>
+
+## Misc
+
+<details>
+<summary><b><i>38.Budget Setup
+
+Setup a cost budget in your AWS account based on your needs.
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Go to "Billing"
+
+2. Click on "Budgets" in the menu
+
+3. Click on "Create a budget"
+
+4. Choose "Cost Budget" and click on "Next"
+
+5. Choose the values that work for you. For example, recurring monthly budget with a specific amount
+
+6. Insert a budget name and Click on "Next"
+
+7. Set up an alert but clicking on "Add an alert threshold"
+
+8. Set a threshold (e.g. 75% of budgeted amount)
+
+9. Set an email where a notification will be sent
+
+10. Click on "Next" until you can click on "Create a budget"
+
+</details>
+
+<details>
+<summary><b><i>39.No Application
+
+Explain what might be possible reasons for the following issues:
+  - Getting "time out" when trying to reach an application running on EC2 instance
+  - Getting "connection refused" error
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+'Time out' Can be due to one of the following:
+  - Security group doesn't allow access
+  - No host (yes, I know. Not the first thing to check and yet...)
+  - Operating system firewall blocking traffic
+
+'Connection refused' can happen due to one of the following:
+  - Application didn't launch properly or has some issue (doesn't listens on the designated port)
+  - Firewall replied with a reject instead of dropping the packets
+
+</details>
+
+## Questions
+
+## Global Infrastructure
+
+<details>
+<summary><b><i>40.Explain the following:
+
+- Availability zone
+- Region
+- Edge location
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS regions are data centers hosted across different geographical locations worldwide.
+
+Within each region, there are multiple isolated locations known as Availability Zones. Each availability zone is one or more data-centers with redundant network and connectivity and power supply. Multiple availability zones ensure high availability in case one of them goes down.
+
+Edge locations are basically content delivery network which caches data and insures lower latency and faster delivery to the users in any location. They are located in major cities in the world.
+
+</details>
+
+<details>
+<summary><b><i>41.True or False? Each AWS region is designed to be completely isolated from the other AWS regions.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>42.True or False? Each region has a minimum number of 1 availability zones and the maximum is 4.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. The minimum is 2 while the maximum is 6.
+
+</details>
+
+<details>
+<summary><b><i>43.What considerations to take when choosing an AWS region for running a new application?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Services Availability: not all service (and all their features) are available in every region
+
+2. Reduced latency: deploy application in a region that is close to customers
+
+3. Compliance: some countries have more strict rules and requirements such as making sure the data stays within the borders of the country or the region. In that case, only specific region can be used for running the application
+
+4. Pricing: the pricing might not be consistent across regions so, the price for the same service in different regions might be different.
+
+</details>
