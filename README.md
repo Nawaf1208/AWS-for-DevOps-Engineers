@@ -2090,3 +2090,211 @@ $\color{green}{\text{Answer}}$
 4. Pricing: the pricing might not be consistent across regions so, the price for the same service in different regions might be different.
 
 </details>
+
+## IAM
+
+<details>
+<summary><b><i>44.What is IAM?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+In short, it's used for managing users, groups, access policies & roles
+
+</details>
+
+<details>
+<summary><b><i>45.True or False? IAM configuration is defined globally and not per region.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>46.True or False? When creating an AWS account, root account is created by default. This is the recommended account to use and share in your organization.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Instead of using the root account, you should be creating users and use them.
+
+</details>
+
+<details>
+<summary><b><i>47.True or False? Groups in AWS IAM, can contain only users and not other groups.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>48.True or False? Users in AWS IAM, can belong only to a single group.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Users can belong to multiple groups.
+
+</details>
+
+<details>
+<summary><b><i>49.What are some best practices regarding IAM in AWS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Delete root account access keys and don't use root account regularly
+
+Create IAM user for any physical user. Don't share users.
+
+Apply "least privilege principle": give users only the permissions they need, nothing more than that.
+
+Set up MFA and consider enforcing using it
+
+Make use of groups to assign permissions ( user -> group -> permissions )
+
+</details>
+
+<details>
+<summary><b><i>50.What permissions does a new user have?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Only a login access.
+
+</details>
+
+<details>
+<summary><b><i>51.True or False? If a user in AWS is using password for authenticating, he doesn't needs to enable MFA.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. MFA is a great additional security layer to use for authentication.
+
+</details>
+
+<details>
+<summary><b><i>52.What ways are there to access AWS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Management Console
+
+AWS CLI
+
+AWS SDK
+
+</details>
+
+<details>
+<summary><b><i>53.What are Roles?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+An IAM role is an IAM identity that you can create in your account that has specific permissions. It is an AWS identity with permission policies that determine what the identity can and cannot do in AWS.
+
+For example, you can make use of a role which allows EC2 service to access s3 buckets (read and write).
+
+</details>
+
+<details>
+<summary><b><i>54.What are Policies?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Policies documents used to give permissions as to what a user, group or role are able to do. Their format is JSON.
+
+</details>
+
+<details>
+<summary><b><i>55.A user is unable to access an s3 bucket. What might be the problem?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+There can be several reasons for that. One of them is lack of policy. To solve that, the admin has to attach the user with a policy what allows him to access the s3 bucket.
+
+</details>
+
+<details>
+<summary><b><i>56.What should you use to:
+
+- Grant access between two services/resources?
+- Grant user access to resources/services?
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Role
+- Policy
+
+</details>
+
+<details>
+<summary><b><i>57.What statements AWS IAM policies are consist of?</i></b></summary>
+
+Sid: identifier of the statement (optional)
+
+Effect: allow or deny access
+
+Action: list of actions (to deny or allow)
+
+Resource: a list of resources to which the actions are applied
+
+Principal: role or account or user to which to apply the policy
+
+Condition: conditions to determine when the policy is applied (optional)
+
+</details>
+
+<details>
+<summary><b><i>58.Explain the following policy:
+
+```JSON
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect:": "Allow",
+            "Action": "*",
+            "Resources": "*"
+        }
+    ]
+}
+```
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+This policy permits to perform any action on any resource. It happens to be the "AdministratorAccess" policy.
+
+</details>
+
+<details>
+<summary><b><i>59.What security tools AWS IAM provides?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+IAM Credentials Report: lists all the account users and the status of their credentials
+IAM Access Advisor: Shows service permissions granted to a user and information on when he accessed these services the last time
+
+</details>
+
+<details>
+<summary><b><i>60.Which tool would you use to optimize user permissions by identifying which services he doesn't regularly (or at all) access?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+IAM Access Advisor
+
+</details>
+
+<details>
+<summary><b><i>61.What type of IAM object would you use to allow inter-service communication?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Role
+
+</details>
