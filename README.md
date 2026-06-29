@@ -2345,7 +2345,7 @@ AMI. With AMI (Amazon Machine Image) you can customize EC2 instances by specifyi
 ## AMI
 
 <details>
-<summary><b><i>66.What is AMI?
+<summary><b><i>66.What is AMI?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
