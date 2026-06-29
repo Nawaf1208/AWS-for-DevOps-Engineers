@@ -2298,3 +2298,164 @@ $\color{green}{\text{Answer}}$
 Role
 
 </details>
+
+## EC2
+
+<details>
+<summary><b><i>62.What is EC2?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A web service that provides secure, resizable compute capacity in the cloud.
+
+</details>
+
+<details>
+<summary><b><i>63.True or False? EC2 is a regional service.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. As opposed to IAM for example, which is a global service, EC2 is a regional service.
+
+</details>
+
+<details>
+<summary><b><i>64.What are some of the properties/configuration options of EC2 instances that can be set or modified?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- OS (Linux, Windows)
+- RAM and CPU
+- Networking - IP, Card properties like speed
+- Storage Space - (EBS, EFS, EC2 Instance Store)
+- EC2 User Data
+- Security groups
+
+</details>
+
+<details>
+<summary><b><i>65.What would you use for customizing EC2 instances? As in software installation, OS configuration, etc.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AMI. With AMI (Amazon Machine Image) you can customize EC2 instances by specifying which software to install, what OS changes should be applied, etc.
+
+</details>
+
+## AMI
+
+<details>
+<summary><b><i>66.What is AMI?
+
+$\color{green}{\text{Answer}}$
+
+Amazon Machine Images is "An Amazon Machine Image (AMI) provides the information required to launch an instance".
+
+</details>
+
+<details>
+<summary><b><i>67.What are the different sources for AMIs?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Personal AMIs - AMIs you create
+- AWS Marketplace for AMIs - AMIs made by others, mostly sold for some price
+- Public AMIs - Provided by AWS
+
+</details>
+
+<details>
+<summary><b><i>68.True or False? AMI are built for specific region.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True (but they can be copied from one region to another).
+
+</details>
+
+<details>
+<summary><b><i>69.Describe in high-level the process of creating AMIs.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Start an EC2 instance
+
+2. Customized the EC2 instance (install packages, change OS configuration, etc.)
+
+3. Stop the instance (for avoiding data integrity issues)
+
+4. Create EBS snapshot and build an AMI
+
+5. To verify and test the AMI, launch an instance from the AMI
+
+</details>
+
+<details>
+<summary><b><i>70.What is an instance type?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The instance type that you specify determines the hardware of the host computer used for your instance.
+
+</details>
+
+<details>
+<summary><b><i>71.Explain the instance type naming convention.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Let's take for example the following instance type: `m5.large`
+
+`m` is the instance class `5` is the generation `large` is the size of the instance (affects the spec properties like vCPUs and RAM).
+
+</details>
+
+<details>
+<summary><b><i>72.True or False? The following are instance types available for a user in AWS:
+  
+- Compute optimized
+- Network optimized
+- Web optimized
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. From the above list only compute optimized is available.
+
+</details>
+
+<details>
+<summary><b><i>73.Explain each of the following instance types:
+
+- Compute Optimized
+- Memory Optimized
+- Storage Optimized
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Compute Optimized:
+  - Used for compute-intensive tasks
+  - It has high performance processors
+  - Use cases vary: gaming serves, machine learning, batch processing, etc.
+
+Memory Optimized:
+  - Used for processing large data sets in memory
+  - Other use cases: high performance, databases, distributed cache stores
+
+Storage Optimized:
+  - Used for storage intensive tasks - high read and write access to large data sets
+  - Use cases: databases, OLTP system, distributing file systems
+
+</details>
+
+<details>
+<summary><b><i>74.What can you attach to an EC2 instance in order to store data?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EBS
+
+</details>
