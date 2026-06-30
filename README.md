@@ -2518,3 +2518,89 @@ $\color{green}{\text{Answer}}$
 - Moving the data between AZs
 
 </details>
+
+<details>
+<summary><b><i>81.Is it possible to attach the same EBS volume to multiple EC2 instances?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Yes, with multi-attach it's possible to attach a single EBS volume to multiple instances.
+
+</details>
+
+<details>
+<summary><b><i>82.True or False? EBS is a network drive hence, it requires network connectivity.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>83.What EBS volume types are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+HDD (st 1, sc 1): 
+  - Low cost HDD volumes
+
+SSD:
+  - io1, io2: Highest performance SSD
+  - gp2, gp3: General purpose SSD
+
+</details>
+
+<details>
+<summary><b><i>84.If you need an EBS volume for low latency workloads, which volume type would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SSD - io1, io2
+
+</details>
+
+<details>
+<summary><b><i>85.If you need an EBS volume for workloads that require good performance but the cost is also an important aspect for you, which volume type would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SSD - gp2, gp3
+
+</details>
+
+<details>
+<summary><b><i>86.If you need an EBS volume for high-throughput, which volume type would you use?</i></b></summary></details>
+
+$\color{green}{\text{Answer}}$
+
+SSD - io1, io2
+
+</details>
+
+<details>
+<summary><b><i>87.If you need an EBS volume for infrequently data access, which volume type would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+HDD - sc1
+
+</details>
+
+<details>
+<summary><b><i>88.Which EBS volume types can be used as boot volumes for EC2 instances?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SSD: gp2, gp3, io1, io2
+
+</details>
+
+<details>
+<summary><b><i>89.True or False? In EBS gp2 volume type, IP will increase if the disk size increases.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
