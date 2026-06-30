@@ -2459,3 +2459,62 @@ $\color{green}{\text{Answer}}$
 EBS
 
 </details>
+
+## EBS
+
+<details>
+<summary><b><i>75.Explain Amazon EBS.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EBS provides block level storage volumes for use with EC2 instances. EBS volumes behave like raw, unformatted block devices.
+
+</details>
+
+<details>
+<summary><b><i>76.What happens to EBS volumes when the instance is terminated?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+By default, the root volume is marked for deletion, while other volumes will still remain.
+
+You can control what will happen to every volume upon termination.
+
+</details>
+
+<details>
+<summary><b><i>77.What happens to the EC2 disk (EBS) when the instance is stopped?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Disk is intact and can be used when the instance starts.
+
+</details>
+
+<details>
+<summary><b><i>78.True or False? EBS volumes are locked to a specific availability zone.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>79.Explain EBS Snapshots.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EBS snapshots used for making a backup of the EBS volume at point of time.
+
+</details>
+
+<details>
+<summary><b><i>80.What are the use cases for using EBS snapshots?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Backups of the data
+- Moving the data between AZs
+
+</details>
