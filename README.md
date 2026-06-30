@@ -2570,7 +2570,7 @@ SSD - gp2, gp3
 </details>
 
 <details>
-<summary><b><i>86.If you need an EBS volume for high-throughput, which volume type would you use?</i></b></summary></details>
+<summary><b><i>86.If you need an EBS volume for high-throughput, which volume type would you use?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
