@@ -2604,3 +2604,34 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+## Instance Store
+
+<details>
+<summary><b><i>90.If you would like to have an hardware disk attached to your EC2 instead of a network one (EBS). What would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EC2 Instance Store
+
+</details>
+
+<details>
+<summary><b><i>91.Explain EC2 Instance Store. Why would someone choose to use it over other options?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EC2 instance store provides better I/O performances when compared to EBS.
+
+It is mostly used for cache and temporary data purposes.
+
+</details>
+
+<details>
+<summary><b><i>92.Are there any disadvantages in using instance store over EBS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Yes, the data on instance store is lost when they are stopped.
+
+</details>
