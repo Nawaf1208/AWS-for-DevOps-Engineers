@@ -2675,3 +2675,56 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+<details>
+<summary><b><i>97.True or False? EFS requires the user to perform capacity planning as it doesn't scales automatically.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. EFS scales automatically and you pay-per-use.
+
+</details>
+
+<details>
+<summary><b><i>98.What EFS modes are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Performance mode
+  - General purpose: used mainly for CMS, web serving, ... as it's optimal for latency sensitive applications
+  - Max I/O: great for scaling to high levels of throughput and I/O operations per second
+
+Throughput mode
+  - Bursting: scale throughput based on FS size
+  - Provisioned: fixed throughput
+
+</details>
+
+<details>
+<summary><b><i>99.Which EFS mode would you use if you need to perform media processing?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Performance Mode (Max I/O): It provides high throughput and scales to operations per second. Mainly used for big data, media processing, etc.
+
+</details>
+
+<details>
+<summary><b><i>100.What is the default EFS mode?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Performance Mode (General Purpose): Used for web serving, CMS, ... anything that is sensitive to latency.
+
+</details>
+
+<details>
+<summary><b><i>101.What EFS storage tiers are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Standard: frequently accessed files
+
+Infrequent access: lower prices to store files but it also costs to retrieve them
+
+</details>
