@@ -2635,3 +2635,43 @@ $\color{green}{\text{Answer}}$
 Yes, the data on instance store is lost when they are stopped.
 
 </details>
+
+## EFS
+
+<details>
+<summary><b><i>93.What is Amazon EFS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources.
+
+</details>
+
+<details>
+<summary><b><i>94.True or False? EFS is locked into a single availability zone.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. EFS can be mounted across multiple availability zones.
+
+</details>
+
+<details>
+<summary><b><i>95.What are some use cases for using EFS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Data sharing (e.g. developers working on the same source control)
+- Web serving
+- Content management
+
+</details>
+
+<details>
+<summary><b><i>96.True or False? EFS only compatible with Linux based AMI.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
