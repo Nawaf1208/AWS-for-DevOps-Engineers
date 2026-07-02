@@ -2873,3 +2873,30 @@ $\color{green}{\text{Answer}}$
 False. Security groups only contain allow rules.
 
 </details>
+
+<details>
+<summary><b><i>116.True or False? One security group can be attached to multiple instances.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>117.True or False? Security groups are not locked down to a region and VPC (meaning you don't have to create a new one when switching regions).</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. They are locked down to regions and VPC.
+
+</details>
+
+<details>
+<summary><b><i>118.True or False? By default, when using security groups, all inbound traffic to an EC2 instance is blocked and all outbound traffic is allowed.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
