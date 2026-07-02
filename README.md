@@ -2728,3 +2728,119 @@ Standard: frequently accessed files
 Infrequent access: lower prices to store files but it also costs to retrieve them
 
 </details>
+
+## Pricing Models
+
+<details>
+<summary><b><i>102.What EC2 pricing models are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+On Demand - pay a fixed rate by the hour/second with no commitment. You can provision and terminate it at any given time. 
+
+Reserved - you get capacity reservation, basically purchase an instance for a fixed time of period. The longer, the cheaper. 
+
+Spot - Enables you to bid whatever price you want for instances or pay the spot price. 
+
+Dedicated Hosts - physical EC2 server dedicated for your use.
+
+</details>
+
+<details>
+<summary><b><i>103.True or False? Reserved instance has to be used for a minimum of 1 year.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>104.Explain the following types of reserved instances:
+  
+- Convertible Reserved Instances
+- Scheduled Reserved Instances
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Convertible Reserved Instances: used for long running workloads but used when instance type might change during the period of time it's reserved
+
+Scheduled Reserved Instances: when you need to reserve an instance for a long period but you don't need it continuously (so for example you need it only in the morning)
+
+</details>
+
+<details>
+<summary><b><i>105.True or False? In EC2 On Demand, you pay per hour when using Linux or Windows and per second (after first minute) when using any other operating system.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. You pay per second (after the first minute) when using Windows or Linux and per hour for any other OS.
+
+</details>
+
+<details>
+<summary><b><i>106.You need an instance for short-term and the workload running on instance must not be interrupted. Which pricing model would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+On Demand is good for short-term non-interrupted workloads (but it also has the highest cost).
+
+</details>
+
+<details>
+<summary><b><i>107.You need an instance for running an application for a period of 2 years continuously, without changing instance type. Which pricing model would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Reserved instances: they are cheaper than on-demand and the instance is yours for the chosen period of time.
+
+</details>
+
+<details>
+<summary><b><i>108.Which pricing model has potentially the biggest discount and what its advantage.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Spot instances provide the biggest discount but has the disadvantage of risking losing them due bigger bid price.
+
+</details>
+
+<details>
+<summary><b><i>109.You need an instance for two years, but only between 10:00-15:00 every day. Which pricing model would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Reserved instances from the "Scheduled Reserved Instances" type which allows you to reserve for specific time window (like 10:00-15:00 every day).
+
+</details>
+
+<details>
+<summary><b><i>110.You need an instance for running workloads. You don't care if they fail for a given moment as long as they run eventually. Which pricing model would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Spot instances. The discount potential is the highest compared to all other pricing models. The disadvantage is that you can lose the instance at any point so, you must run only workloads that you are fine with them failing suddenly.
+
+</details>
+
+<details>
+<summary><b><i>111.You need a physical server only for your use. Which pricing model are you going to use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EC2 Dedicated Host
+
+</details>
+
+<details>
+<summary><b><i>112.What are some of the differences between dedicated hosts and dedicated instances?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+In dedicated hosts you have per host billing, you have more visibility (sockets, cores, ...) and you can control where instance will be placed.
+
+In dedicated instances the billing is per instance but you can't control placement and you don't have visibility of sockets, cores, ...
+
+</details>
