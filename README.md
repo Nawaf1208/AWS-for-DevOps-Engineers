@@ -2844,3 +2844,32 @@ In dedicated hosts you have per host billing, you have more visibility (sockets,
 In dedicated instances the billing is per instance but you can't control placement and you don't have visibility of sockets, cores, ...
 
 </details>
+
+<details>
+<summary><b><i>113.For what use cases, EC2 dedicated hosts are useful for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Compliance needs
+- When the software license is complex (Bring Your Own License) and doesn't support cloud or multi-tenants
+- Regulatory requirements
+
+</details>
+
+<details>
+<summary><b><i>114.What are Security Groups?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A security group acts as a virtual firewall that controls the traffic for one or more instances.
+
+</details>
+
+<details>
+<summary><b><i>115.True or False? Security groups only contain deny rules.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Security groups only contain allow rules.
+
+</details>
