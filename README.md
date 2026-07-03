@@ -3113,3 +3113,72 @@ $\color{green}{\text{Answer}}$
 - Usually combined with Reserved Instances and Saving Plans to achieve cost saving
 
 </details>
+
+## Launch Template
+
+<details>
+<summary><b><i>140.What is a launch template?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+You can create a launch template that contains the configuration information to launch an instance. 
+
+You can use launch templates to store launch parameters so that you do not have to specify them every time you launch an instance.
+
+</details>
+
+<details>
+<summary><b><i>141.What is the difference between Launch Configuration and Launch Template?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Launch configuration is a legacy form of Launch Template that must be recreated every time you would like to update the configuration.
+
+In addition, launch template has the clear benefits of:
+  - Provision both On-Demand and Spot instances
+  - supporting multiple versions
+  - support creating parameters subsets (used for reuse and inheritance)
+
+</details>
+
+## ENI
+
+<details>
+<summary><b><i>142.Explain Elastic Network Interfaces (ENI).</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+An elastic network interface is a logical networking component in a VPC that represents a virtual network card.
+
+</details>
+
+<details>
+<summary><b><i>143.Name at least three attributes the Elastic Network Interfaces (ENI) can include.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. One public IPv4 address
+
+2. Mac Address
+
+3. A primary private IPv4 address (from the address range of your VPC)
+
+</details>
+
+<details>
+<summary><b><i>144.True or False? ENI are not bound to a specific availability zone.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. ENI are bound to specific availability zone.
+
+</details>
+
+<details>
+<summary><b><i>145.True or False? ENI can be created independently of EC2 instances.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. They can be attached later on and on the fly (for failover purposes).
+
+</details>
