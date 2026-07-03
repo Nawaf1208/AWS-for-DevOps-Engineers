@@ -3018,3 +3018,98 @@ $\color{green}{\text{Answer}}$
 Set of Spot instances and if you would like, also on-demand instances.
 
 </details>
+
+<details>
+<summary><b><i>131.What strategies are there to allocate Spot instances?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- lowestPrice: launch instances from the pool that has the lowest price
+- diversified: distributed across all pools
+- capacityOptimized: optimized based on the number of instances
+
+</details>
+
+<details>
+<summary><b><i>132.From networking perspective, what do you get by default when running an EC2 instance?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A private IP and a public IP
+
+</details>
+
+<details>
+<summary><b><i>133.Explain EC2 hibernate.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Hibernation saves the contents from the instance memory (RAM) to your Amazon Elastic Block Store (Amazon EBS) root volume.
+
+</details>
+
+<details>
+<summary><b><i>134.True or False? Using EC2 hibernate option results in having faster instance boot.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. This is because the operating system isn't restarted or stopped.
+
+</details>
+
+<details>
+<summary><b><i>135.What are some use cases for using EC2 hibernate option?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Save RAM state
+- Service with long time initialization
+- Keep long-running processes
+
+</details>
+
+<details>
+<summary><b><i>136.What are some limitations of EC2 hibernate option?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Instance RAM size is limited
+- Root volume must be encrypted EBS
+- Hibernation time is limited
+- Doesn't supports all instances types
+- No support for bare metal. Only On-Demand and Reserved instances
+- Doesn't supports all AMIs
+
+</details>
+
+<details>
+<summary><b><i>137.Explain what is EC2 Nitro.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Next generation EC2 instances using new virtualization technology
+- Better EBS: 64,000 EBS IOPS
+- Better networking: HPC, IPv6
+- Better security
+
+</details>
+
+<details>
+<summary><b><i>138.What CPU customization is available with EC2?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Modifying number of CPU cores (useful for high RAM and low CPU applications)
+- Modifying number of threads per cure (useful for HPC workloads)
+
+</details>
+
+<details>
+<summary><b><i>139.Explain EC2 Capacity Reservations.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Allows you to ensure you have EC2 capacity when you need it
+- Usually combined with Reserved Instances and Saving Plans to achieve cost saving
+
+</details>
