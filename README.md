@@ -2902,7 +2902,7 @@ True
 </details>
 
 <details>
-<summary><b><i>119.What is the advantage of referencing security groups from a given security group?</i></b></summary></details>
+<summary><b><i>119.What is the advantage of referencing security groups from a given security group?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
