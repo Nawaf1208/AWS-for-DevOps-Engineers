@@ -2900,3 +2900,121 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+<details>
+<summary><b><i>119.What is the advantage of referencing security groups from a given security group?</i></b></summary></details>
+
+$\color{green}{\text{Answer}}$
+
+Imagine you have an instance referencing two security groups, allowing to get inbound traffic from them.
+
+Now imagine you have two instances, each using one of the security groups referenced in the instance we've just mentioned. This means you can get traffic from these two instances because they use security groups which referenced in the instance mentioned at the beginning. No need to use IPs.
+
+</details>
+
+<details>
+<summary><b><i>120.How to migrate an instance to another availability zone?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Create an Amazon Machine Image (AMI) of your existing instance, then launch a new instance from that AMI while selecting your desired target Availability Zone.
+
+</details>
+
+<details>
+<summary><b><i>121.What can you attach to an EC2 instance in order to store data?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EBS
+
+</details>
+
+<details>
+<summary><b><i>122.What EC2 reserved instance types are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Standard RI - most significant discount + suited for steady-state usage 
+
+Convertible RI - discount + change attribute of RI + suited for steady-state usage 
+
+Scheduled RI - launch within time windows you reserve
+
+</details>
+
+<details>
+<summary><b><i>123.For how long can reserved instances be reserved?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1 or 3 years
+
+</details>
+
+<details>
+<summary><b><i>124.What allows you to control inbound and outbound instance traffic?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Security Groups
+
+</details>
+
+<details>
+<summary><b><i>125.What bootstrapping means and how to use it in AWS EC2?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Bootstrapping is about launching commands when a machine starts for the first time. In AWS EC2 this is done using the EC2 user data script.
+
+</details>
+
+<details>
+<summary><b><i>126.You get time out when trying reach your application which runs on an EC2 instance. Specify one reason why it would possibly happen.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Security group isn't configured properly.
+
+</details>
+
+<details>
+<summary><b><i>127.What is the AWS Instance Connect?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon EC2 Instance Connect provides a simple and secure way to connect to your Linux instances using Secure Shell (SSH).
+
+</details>
+
+<details>
+<summary><b><i>128.You try to run EC2 commands in an EC2 instance you've just created but it fails due to missing credentials. What would you do?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+DO NOT configure AWS credentials on the instance (this means anyone else in your account would be able to use and see your credentials).
+
+The best practice is to attach an IAM role with sufficient permissions (like `IAMReadOnlyAccess`)
+
+</details>
+
+<details>
+<summary><b><i>129.True or False? Cancelling a Spot instance request terminates the instance.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. When you cancel a Spot instance request, you are not terminating the instances created by it.
+
+To terminate such instances, you must cancel the Spot instance request first.
+
+</details>
+
+<details>
+<summary><b><i>130.What are Spot Fleets?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Set of Spot instances and if you would like, also on-demand instances.
+
+</details>
