@@ -3249,3 +3249,99 @@ Pros:
 - Maximized high availability (instances on different hardware, span across AZs)
 
 </details>
+
+## VPC
+
+<details>
+<summary><b><i>151.What is VPC?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define.
+
+</details>
+
+<details>
+<summary><b><i>152.True or False? VPC spans multiple regions.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False
+
+</details>
+
+<details>
+<summary><b><i>153.True or False? It's possible to have multiple VPCs in one region.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. As of today, the soft limit is 5.
+
+</details>
+
+<details>
+<summary><b><i>154.True or False? Subnets belong to the same VPC, can be in different availability zones.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. Just to clarify, a single subnet resides entirely in one AZ.
+
+</details>
+
+<details>
+<summary><b><i>155.You have noticed your VPC's subnets (which use x.x.x.x/20 CIDR) have 4096 available IP addresses although this CIDR should have 4096 addresses. What is the reason for that?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS reserves 5 IP addresses in each subnet - first 4 and the last one, and so they aren't available for use.
+
+</details>
+
+<details>
+<summary><b><i>156.What AWS uses the 5 reserved IP addresses for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+x.x.x.0 - network address 
+
+x.x.x.1 - VPC router 
+
+x.x.x.2 - DNS mapping 
+
+x.x.x.3 - future use 
+
+x.x.x.255 - broadcast address
+
+</details>
+
+<details>
+<summary><b><i>157.What is an Internet Gateway?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Component that allows communication between instances in your VPC and the internet.
+
+In addition it's good to know that IGW is:
+- Highly available and redundant
+- Not porivding internet access by its own (you need route tables to be edited)
+- Created separately from VPC
+
+</details>
+
+<details>
+<summary><b><i>158.True or False? One or more VPCs can be attached to one Internet Gateway.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Only one VPC can be attached to one IGW and vice versa.
+
+</details>
+
+<details>
+<summary><b><i>159.True or False? NACL allow or deny traffic on the subnet level.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
