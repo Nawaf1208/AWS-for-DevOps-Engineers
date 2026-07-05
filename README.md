@@ -3182,3 +3182,70 @@ $\color{green}{\text{Answer}}$
 True. They can be attached later on and on the fly (for failover purposes).
 
 </details>
+
+## Placement Groups
+
+<details>
+<summary><b><i>146.What are "Placement Groups"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+When you launch a new EC2 instance, the EC2 service attempts to place the instance in such a way that all of your instances are spread out across underlying hardware to minimize correlated failures. You can use placement groups to influence the placement of a group of interdependent instances to meet the needs of your workload.
+
+</details>
+
+<details>
+<summary><b><i>147.What Placement Groups strategies are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Cluster: places instance close together in an AZ.
+- Spread: spreads the instance across the hardware.
+- Partition: spreads the instances across different partitions (= different sets of hardware/racks) within an AZ.
+
+</details>
+
+<details>
+<summary><b><i>148.For each of the following scenarios choose a placement group strategy:
+  
+- High availability is top priority
+- Low latency between instances
+- Instances must be isolated from each other
+- Big Data applications that are partition aware
+- Big Data process that needs to end quickly
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Spread
+- Cluster
+- Spread
+- Partition
+- Cluster
+
+</details>
+
+<details>
+<summary><b><i>149.What are the cons and pros of the "Cluster" placement group strategy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Cons: if the hardware fails, all instances fail 
+
+Pros: Low latency & high throughput network
+
+</details>
+
+<details>
+<summary><b><i>150.What are the cons and pros of the "Spread" placement group strategy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Cons:
+- Current limitation is 7 instances per AZ (per replacement group)
+
+Pros:
+- Maximized high availability (instances on different hardware, span across AZs)
+
+</details>
