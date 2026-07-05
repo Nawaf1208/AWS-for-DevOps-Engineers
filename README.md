@@ -3345,3 +3345,87 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+<details>
+<summary><b><i>160.What is VPC peering?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
+
+</details>
+
+<details>
+<summary><b><i>161.True or False? Multiple Internet Gateways can be attached to one VPC.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Only one internet gateway can be attached to a single VPC.
+
+</details>
+
+<details>
+<summary><b><i>162.You've restarted your EC2 instance and the public IP has changed. How would you deal with it so it won't happen?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Use Elastic IP which provides you a fixed IP address.
+
+</details>
+
+<details>
+<summary><b><i>163.When creating a new VPC, there is an option called "Tenancy". What is it used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Tenancy option defines if EC2 instances that you launch into the VPC will run on hardware that's shared with other AWS accounts or on hardware that's dedicated for your use only.
+
+</details>
+
+<details>
+<summary><b><i>164.What is an Elastic IP address?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+An Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is allocated to your AWS account, and is yours until you release it. 
+
+By using an Elastic IP address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account.
+
+</details>
+
+<details>
+<summary><b><i>165.Why would you use an Elastic IP address?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Let's say you have an instance that you need to shutdown or perform some maintenance on. In that case, what you would want to do is to move the Elastic IP address to another instance that is operational, until you finish to perform the maintenance and then you can move it back to the original instance (or keep it assigned to the second one).
+
+</details>
+
+<details>
+<summary><b><i>166.True or False? When stopping and starting an EC2 instance, its public IP changes.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>167.What are the best practices around Elastic IP?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The best practice is actually not using them in the first place. It's more common to use a load balancer without a public IP or use a random public IP and register a DNS record to it.
+
+</details>
+
+
+<details>
+<summary><b><i>168.True or False? An Elastic IP is free, as long it's not associated with an EC2 instance.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. An Elastic IP is free of charge as long as **it is** associated with an EC2 instance. This instance should be running and should have only one Elastic IP.
+
+</details>
