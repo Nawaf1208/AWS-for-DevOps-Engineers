@@ -3420,12 +3420,60 @@ The best practice is actually not using them in the first place. It's more commo
 
 </details>
 
-
 <details>
 <summary><b><i>168.True or False? An Elastic IP is free, as long it's not associated with an EC2 instance.</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
 False. An Elastic IP is free of charge as long as **it is** associated with an EC2 instance. This instance should be running and should have only one Elastic IP.
+
+</details>
+
+<details>
+<summary><b><i>169.True or False? Route Tables used to allow or deny traffic from the internet to AWS instances.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False
+
+</details>
+
+<details>
+<summary><b><i>170.Explain Security Groups and Network ACLs.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+NACL - security layer on the subnet level.
+
+Security Group - security layer on the instance level.
+
+</details>
+
+<details>
+<summary><b><i>171.What is AWS Direct Connect?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Allows you to connect your corporate network to AWS network.
+
+</details>
+
+<details>
+<summary><b><i>172.What would you use if you need a fixed public IP for your EC2 instance?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Elastic IP
+
+</details>
+
+<details>
+<summary><b><i>173.Kratos, your colleague, decided to use a subnet of /27 because he needs 29 IP addresses for EC2 instances. Is Kratos right?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+No. Since AWS reserves 5 IP addresses for every subnet, Kratos will have 32-5=27 addresses and this is less than what he needs (29).
+
+It's better if Kratos uses a subnet of size /26.
 
 </details>
