@@ -3478,7 +3478,7 @@ It's better if Kratos uses a subnet of size /26.
 
 </details>
 
-## Default VPC
+### Default VPC
 
 <details>
 <summary><b><i>174.True or False? By default, any new account has a default VPC.</i></b></summary>
