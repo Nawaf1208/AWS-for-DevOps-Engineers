@@ -3477,3 +3477,39 @@ No. Since AWS reserves 5 IP addresses for every subnet, Kratos will have 32-5=27
 It's better if Kratos uses a subnet of size /26.
 
 </details>
+
+## Default VPC
+
+<details>
+<summary><b><i>174.True or False? By default, any new account has a default VPC.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>175.True or False? Default VPC doesn't have internet connectivity and any launched EC2 will only have a private IP assigned.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. The default VPC has internet connectivity and any launched EC2 instance gets a public IPv4 address.
+
+In addition, any launched EC2 instance gets a public and private DNS names.
+
+</details>
+
+<details>
+<summary><b><i>176.Which of the following is included with default VPC?
+  
+- Internet gateway connected to the default VPC
+- A route to main route table that points all traffic to internet gateway
+- Default public subnet
+- Default /16 IPv4 CIDR block
+
+</i></b></summary>
+
+All of them
+
+</details>
