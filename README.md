@@ -3561,3 +3561,41 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+<details>
+<summary><b><i>181.What's one of the issues with the current architecture?
+
+![](Diagram.png)
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Users shouldn't access directly AWS Lambda directly. If you'd to like to expose your Lambda function to users a better approach would be to set up API Gateway endpoint between the users and the Lambda function.
+
+This not only provides enhanced security but also easier access for the user where he can use HTTP or HTTPS for accessing the function.
+
+</details>
+
+<details>
+<summary><b><i>182.Specify one or more use cases for using AWS Lambda.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Uploading images to S3 and tagging them or inserting information on the images to a database.
+- Uploading videos to S3 and edit them or add subtitles/captions to them and store the result in S3.
+- Use SNS and/or SQS to trigger functions based on notifications or messages received from these services.
+- Cron Jobs: Use Lambda together with CloudWatch events to schedule tasks/functions periodically.
+
+</details>
+
+<details>
+<summary><b><i>183.You run an architecture where you have a Lambda function that uploads images to S3 bucket and stores information on the images in DynamoDB. You would like to expose the function to users so they can invoke it. Your friend Carlos suggests you expose the credentials to the Lambda function. What's your take on that?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+That's a big no. You shouldn't let users direct access to your Lambda function.
+
+The way to go here and expose the Lambda function to users is to to an API Gateway endpoint.
+
+</details>
