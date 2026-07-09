@@ -3510,6 +3510,54 @@ In addition, any launched EC2 instance gets a public and private DNS names.
 
 </i></b></summary>
 
+$\color{green}{\text{Answer}}$
+
 All of them
+
+</details>
+
+## Lambda
+
+<details>
+<summary><b><i>177.Explain what is AWS Lambda.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume.
+
+</details>
+
+<details>
+<summary><b><i>178.True or False? In AWS Lambda, you are charged as long as a function exists, regardless of whether it's running or not.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Charges are being made when the function is executed for the time it takes to execute and compute resources it uses.
+
+</details>
+
+<details>
+<summary><b><i>179.Which of the following set of languages Lambda supports?
+  
+- R, Swift, Rust, Kotlin
+- Python, Ruby, Go, Kotlin, Bash
+- Python, Ruby, PHP, PowerShell, C#, Perl
+- Python, Ruby, Go, Node.js, Groovy, C++
+- Python, Ruby, Go, Node.js, PowerShell, C#
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Python, Ruby, Go, Node.js, PowerShell, C#
+
+</details>
+
+<details>
+<summary><b><i>180.True or False? Basic lambda permissions allow you only to upload logs to Amazon CloudWatch Logs.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
 
 </details>
