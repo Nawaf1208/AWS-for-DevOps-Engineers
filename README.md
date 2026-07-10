@@ -3599,3 +3599,69 @@ That's a big no. You shouldn't let users direct access to your Lambda function.
 The way to go here and expose the Lambda function to users is to to an API Gateway endpoint.
 
 </details>
+
+## Containers
+
+### ECS
+
+<details>
+<summary><b><i>184.What is Amazon ECS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Elastic Container Service (Amazon ECS) is a fully managed container orchestration service. Customers such as Duolingo, Samsung, GE, and Cook Pad use ECS to run their most sensitive and mission critical applications because of its security, reliability, and scalability.
+
+In simpler words, it allows you to launch containers on AWS.
+While AWS takes care of starting/stopping containers, you need to provision and maintain the infrastructure where the containers are running (EC2 instances).
+
+</details>
+
+<details>
+<summary><b><i>185.What one should do in order to make EC2 instance part of an ECS cluster?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Install ECS agent on it. Some AMIs have built-in configuration for that.
+
+</details>
+
+<details>
+<summary><b><i>186.What ECS launch types are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- EC2 Instance
+- AWS Fargate
+
+</details>
+
+<details>
+<summary><b><i>187.What is Amazon ECR?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Elastic Container Registry (ECR) is a fully-managed Docker container registry that makes it easy for developers to store, manage, and deploy Docker container images.
+
+</details>
+
+<details>
+<summary><b><i>188.What the role "EC2 Instance Profile" is used for in regards to ECS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EC2 Instance Profile used by ECS agent on an EC2 instance to:
+- Make API calls to ECS Service
+- Send logs to CloudWatch from the container
+- Use secrets defined in SSM Parameter Store or Secrets Manager
+- Pull container images from ECR (Registry)
+
+</details>
+
+<details>
+<summary><b><i>189.How to share data between containers (some from ECS and some from Fargate)?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Using EFS is a good way to share data between containers and it works also between different AZs.
+
+</details>
