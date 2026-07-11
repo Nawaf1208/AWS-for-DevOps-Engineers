@@ -3665,3 +3665,36 @@ $\color{green}{\text{Answer}}$
 Using EFS is a good way to share data between containers and it works also between different AZs.
 
 </details>
+
+### Fargate
+
+<details>
+<summary><b><i>190.What is AWS Fargate?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Fargate is a serverless, pay-as-you-go compute engine that lets you focus on building applications without managing servers. AWS Fargate is compatible with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS)
+
+In simpler words, AWS Fargate allows you launch containers on AWS without worrying about managing infrastructure. It runs containers based on the CPU and RAM you need.
+
+</details>
+
+<details>
+<summary><b><i>191.How AWS Fargate different from AWS ECS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+In AWS ECS, you manage the infrastructure - you need to provision and configure the EC2 instances.
+
+While in AWS Fargate, you don't provision or manage the infrastructure, you simply focus on launching Docker containers. You can think of it as the serverless version of AWS ECS.
+
+</details>
+
+<details>
+<summary><b><i>192.True or False? Fargate creates an ENI for every task it runs.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
