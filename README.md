@@ -3698,3 +3698,18 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+## S3
+
+### Basics
+
+<details>
+<summary><b><i>193.Explain what is AWS S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- S3 is a object storage service which is fast, scalable and durable. S3 enables customers to upload, download or store any file or object that is up to 5 TB in size.
+- S3 stands for: Simple Storage Service
+- As a user you don't have to worry about filesystems or disk space
+
+</details>
