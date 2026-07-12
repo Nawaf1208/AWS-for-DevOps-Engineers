@@ -3565,7 +3565,7 @@ True
 <details>
 <summary><b><i>181.What's one of the issues with the current architecture?
 
-![](Diagram.png)
+![](Diagram-1.png)
 
 </i></b></summary>
 
