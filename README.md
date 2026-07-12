@@ -3713,3 +3713,64 @@ $\color{green}{\text{Answer}}$
 - As a user you don't have to worry about filesystems or disk space
 
 </details>
+
+### Buckets 101
+
+<details>
+<summary><b><i>194.What is a bucket?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+An S3 bucket is a resource which is similar to folders in a file system and allows storing objects, which consist of data.
+
+</details>
+
+<details>
+<summary><b><i>195.True or False? Buckets are defined globally.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. They are defined at the region level.
+
+</details>
+
+<details>
+<summary><b><i>196.True or False? A bucket name must be globally unique.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>197.How to rename a bucket in S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A S3 bucket name is immutable. That means it's not possible to change it, without removing and creating a new bucket.
+
+This is why the process for renaming a bucket is as follows:
+- Create a new bucket with the desired name
+- Move the data from the old bucket to it
+- Delete the old bucket
+
+</details>
+
+<details>
+<summary><b><i>198.True or False? The max object size a user can upload in one go, is 5TB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>199.Explain "Multi-part upload"
+
+$\color{green}{\text{Answer}}$
+
+Multipart upload allows you to upload a single object as a set of parts. Each part is a contiguous portion of the object's data...In general, when your object size reaches 100 MB, you should consider using multipart uploads instead of uploading the object in a single operation.
+
+</details>
