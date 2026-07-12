@@ -3774,3 +3774,41 @@ $\color{green}{\text{Answer}}$
 Multipart upload allows you to upload a single object as a set of parts. Each part is a contiguous portion of the object's data...In general, when your object size reaches 100 MB, you should consider using multipart uploads instead of uploading the object in a single operation.
 
 </details>
+
+### Objects
+
+<details>
+<summary><b><i>200.Explain Object Versioning.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+When enabled at a bucket level, versioning allows you to upload new version of files, overriding previous version and so be able to easily roll-back and protect your data from being permanently deleted.
+
+</details>
+
+<details>
+<summary><b><i>201.Explain the following:
+  
+- Object Lifecycles
+- Object Sharing
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Object Lifecycles - Transfer objects between storage classes based on defined rules of time periods
+
+Object Sharing - Share objects via a URL link
+
+</details>
+
+<details>
+<summary><b><i>202.Explain Object Durability and Object Availability.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Object Durability: The percent over a one-year time period that a file will not be lost 
+
+Object Availability: The percent over a one-year time period that a file will be accessible
+
+</details>
