@@ -3856,3 +3856,87 @@ $\color{green}{\text{Answer}}$
 - SSE-C
 
 </details>
+
+<details>
+<summary><b><i>207.Describe shortly how SSE-S3 (AES) encryption works.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- You upload a file to S3 using HTTP (or HTTPS) and header
+- S3 uses the managed data key to encrypt it
+- S3 stores the encrypted object in the bucket
+
+</details>
+
+<details>
+<summary><b><i>208.True or False? In case of SSE-S3 (AES-256) encryption, you manage the key.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. S3 manages the key and uses AES-256 algorithm for the encryption.
+
+</details>
+
+<details>
+<summary><b><i>209.Who or what manages the keys in the case of SSE-KMS encryption?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The KMS service.
+
+</details>
+
+<details>
+<summary><b><i>210.Why would someone choose to use SSE-KMS instead of SSE-S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SS3-KMS provides control over who has access to the keys and you can also enabled audit trail.
+
+</details>
+
+<details>
+<summary><b><i>211.True or False? In case of SSE-C encryption, both S3 and you manage the keys.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. You manage the keys. It's customer provided keys.
+
+</details>
+
+<details>
+<summary><b><i>212.True or False? In case of SSE-C HTTPS must be used and encryption key must be provided in headers for every HTTP request.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>213.Describe shortly how SSE-C encryption works.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. User uploads a file to S3 using HTTPS while providing data key in the header
+
+2. AWS S3 performs the encryption using the provided data key and encrypted object is stored in the bucket
+
+If a user would like to get the object, the same data key would have to be provided.
+
+</details>
+
+<details>
+<summary><b><i>214.With which string an header starts?
+  
+- x-zmz
+- x-amz
+- x-ama
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+x-amz
+
+</details>
