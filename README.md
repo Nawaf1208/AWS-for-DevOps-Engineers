@@ -3940,3 +3940,48 @@ $\color{green}{\text{Answer}}$
 x-amz
 
 </details>
+
+### Misc
+
+<details>
+<summary><b><i>215.What is a storage class? What storage classes are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Each object has a storage class assigned to, affecting its availability and durability. This also has effect on costs. Storage classes offered today:
+
+Standard:
+- Used for general, all-purpose storage (mostly storage that needs to be accessed frequently)
+- The most expensive storage class
+- 11x9% durability
+- 2x9% availability
+- Default storage class
+
+Standard-IA (Infrequent Access):
+- Long lived, infrequently accessed data but must be available the moment it's being accessed
+- 11x9% durability
+- 99.90% availability
+
+One Zone-IA (Infrequent Access):
+- Long-lived, infrequently accessed, non-critical data
+- Less expensive than Standard and Standard-IA storage classes
+- 2x9% durability
+- 99.50% availability
+
+Intelligent-Tiering:
+- Long-lived data with changing or unknown access patterns. Basically, In this class the data automatically moves to the class most suitable for you based on usage patterns
+- Price depends on the used class
+- 11x9% durability
+- 99.90% availability
+
+Glacier: 
+- Archive data with retrieval time ranging from minutes to hours
+
+Glacier Deep Archive: 
+- Archive data that rarely, if ever, needs to be accessed with retrieval times in hours
+
+Both Glacier and Glacier Deep Archive are:
+- The most cheap storage classes
+- have 9x9% durability
+
+</details>
