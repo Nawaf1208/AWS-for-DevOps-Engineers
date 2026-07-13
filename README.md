@@ -3812,3 +3812,47 @@ Object Durability: The percent over a one-year time period that a file will not 
 Object Availability: The percent over a one-year time period that a file will be accessible
 
 </details>
+
+### S3 Security
+
+<details>
+<summary><b><i>203.True or False? Every new S3 bucket is public by default.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. A newly created bucket is private unless it was configured to be public.
+
+</details>
+
+<details>
+<summary><b><i>204.What's a presigned URL?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Since every newly created bucket is by default private it doesn't allows to share files with users. Even if the person who uploaded them tries to view them, it gets denied.
+
+A presigned URL is a way to bypass that and allow sharing the files with users by including the credentials (token) as part of the URL. It can be done for limited time.
+
+</details>
+
+<details>
+<summary><b><i>205.What security measures have you taken in context of S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Don't make a bucket public.
+- Enable encryption if it's disabled.
+- Define an access policy
+
+</details>
+
+<details>
+<summary><b><i>206.What encryption types supported by S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- SSE-S3
+- SSE-KMS
+- SSE-C
+
+</details>
