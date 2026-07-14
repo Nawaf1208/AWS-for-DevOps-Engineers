@@ -3985,3 +3985,102 @@ Both Glacier and Glacier Deep Archive are:
 - have 9x9% durability
 
 </details>
+
+<details>
+<summary><b><i>216.A customer would like to move data which is rarely accessed from standard storage class to the most cheapest class there is. Which storage class should be used?
+  
+One Zone-IA
+Glacier Deep Archive
+Intelligent-Tiering
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Glacier Deep Archive
+
+</details>
+
+<details>
+<summary><b><i>217.What Glacier retrieval options are available for the user?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Expedited, Standard and Bulk
+
+</details>
+
+<details>
+<summary><b><i>218.True or False? Each AWS account can store up to 500 PetaByte of data. Any additional storage will cost double.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Unlimited capacity
+
+</details>
+
+<details>
+<summary><b><i>219.Explain what is Storage Gateway.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage.
+
+</details>
+
+<details>
+<summary><b><i>220.Explain the following Storage Gateway deployments types:
+  
+- File Gateway
+- Volume Gateway
+- Tape Gateway
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon S3 File Gateway is a configuration of the AWS Storage Gateway service that provides your applications a file interface to seamlessly store files as objects in Amazon S3, and access them using industry standard file protocols.
+
+Volume Gateways compress data before that data is transferred to AWS and while stored in AWS. This compression can reduce both data transfer and storage charges. Volume storage is not pre-provisioned; you will be billed for only the amount of data stored on the volume, not the size of the volume you create.
+
+Tape Gateway supports S3 Standard, S3 Glacier, and S3 Glacier Deep Archive storage classes. Data on your virtual tapes is stored in a virtual tape library in Amazon S3 when the backup application is writing data to tapes. After you eject tapes from the backup application, your tapes are archived to S3 Glacier or S3 Glacier Deep Archive.
+
+</details>
+
+<details>
+<summary><b><i>221.What is the difference between stored volumes and cached volumes?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Stored Volumes - Data is located at customer's data center and periodically backed up to AWS 
+
+Cached Volumes - Data is stored in AWS cloud and cached at customer's data center for quick access
+
+</details>
+
+<details>
+<summary><b><i>222.What is "Amazon S3 Transfer Acceleration"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket.
+
+</details>
+
+<details>
+<summary><b><i>223.Explain data consistency.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+S3 Data Consistency provides strong read-after-write consistency for PUT and DELETE requests of objects in the S3 bucket in all AWS Regions. S3 always return latest file version.
+
+</details>
+
+<details>
+<summary><b><i>224.Can you host dynamic websites on S3? What about static websites?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+No. S3 support only statis hosts. On a static website, individual webpages include static content. They might also contain client-side scripts. By contrast, a dynamic website relies on server-side processing, including server-side scripts such as PHP, JSP, or ASP.NET. Amazon S3 does not support server-side scripting.
+
+</details>
