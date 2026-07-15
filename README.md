@@ -4084,3 +4084,42 @@ $\color{green}{\text{Answer}}$
 No. S3 support only statis hosts. On a static website, individual webpages include static content. They might also contain client-side scripts. By contrast, a dynamic website relies on server-side processing, including server-side scripts such as PHP, JSP, or ASP.NET. Amazon S3 does not support server-side scripting.
 
 </details>
+
+## Disaster Recovery
+
+<details>
+<summary><b><i>225.In regards to disaster recovery, what is RTO and RPO?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+RTO - The maximum acceptable length of time that your application can be offline.
+
+RPO - The maximum acceptable length of time during which data might be lost from your application due to an incident.
+
+</details>
+
+<details>
+<summary><b><i>226.What types of disaster recovery techniques AWS supports?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- The Cold Method - Periodically backups and sending the backups off-site
+
+- Pilot Light - Data is mirrored to an environment which is always running
+
+- Warm Standby - Running scaled down version of production environment
+
+- Multi-site - Duplicated environment that is always running
+
+</details>
+
+<details>
+<summary><b><i>227.Which disaster recovery option has the highest downtime and which has the lowest?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Lowest - Multi-site 
+
+Highest - The Cold method
+
+</details>
