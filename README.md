@@ -4123,3 +4123,73 @@ Lowest - Multi-site
 Highest - The Cold method
 
 </details>
+
+## CloudFront
+
+<details>
+<summary><b><i>228.Explain what is CloudFront.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment.
+
+</details>
+
+<details>
+<summary><b><i>229.Explain the following:
+  
+- Origin
+- Edge location
+- Distribution
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The origin is the source location where your content is stored, such as an Amazon S3 bucket or a web server. CloudFront retrieves content from the origin when needed.
+
+An edge location is a CloudFront data center that caches content closer to users. It reduces latency and delivers content faster.
+
+A distribution is the CloudFront configuration that defines how content is delivered from the origin through edge locations. It controls caching, security, and routing settings.
+
+</details>
+
+<details>
+<summary><b><i>230.What delivery methods available for the user with CDN?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Unicast: Unicast delivers content from one server to one user. Each user receives a separate data stream.
+
+2. Multicast: Multicast delivers content from one server to multiple users simultaneously. It is efficient for live streaming and group broadcasts.
+
+3. Anycast: Anycast routes a user's request to the nearest or best available server. It improves speed, reliability, and availability.
+
+</details>
+
+<details>
+<summary><b><i>231.True or False? Objects are cached for the life of TTL.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>232.What is AWS Snowball?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A transport solution which was designed for transferring large amounts of data (petabyte-scale) into and out the AWS cloud.
+
+</details>
+
+<details>
+<summary><b><i>233.How can a company ensure their web application continues to operate if it becomes unavailable in its current single region?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Deploy the application in multiple Regions. Use Amazon Route 53 DNS health checks to route traffic to a healthy Region.
+
+</details>
