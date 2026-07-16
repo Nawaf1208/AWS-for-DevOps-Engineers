@@ -4193,3 +4193,76 @@ $\color{green}{\text{Answer}}$
 Deploy the application in multiple Regions. Use Amazon Route 53 DNS health checks to route traffic to a healthy Region.
 
 </details>
+
+## ELB
+
+<details>
+<summary><b><i>234.What is ELB (Elastic Load Balancing)?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions.
+
+</details>
+
+<details>
+<summary><b><i>235.True or False? Elastic Load Balancer is a managed resource.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. AWS responsible for making sure ELB is operational and takes care of lifecycle operations like upgrades, maintenance and high availability.
+
+</details>
+
+<details>
+<summary><b><i>236.What types of AWS load balancers are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Classic Load Balancer (CLB): Mainly for TCP (layer 4) and HTTP, HTTPS (layer 7)
+
+- Application Load Balancer (ALB): Mainly for HTTP, HTTPS and WebSocket
+
+- Network Load Balancer (NLB): Mainly for TCP, TLS and UDP
+
+- Gateway Load Balancer (GWLB): Mainly for layer 3 operations (IP protocol)
+
+</details>
+
+<details>
+<summary><b><i>237.What's a "listener" in regards to ELB?
+
+$\color{green}{\text{Answer}}$
+
+A listener is a process that constantly checks for connection requests from clients. It uses a configured protocol and port (like HTTP on port 80) to receive traffic and route it to one or more registered target instances or services.
+
+</details>
+
+<details>
+<summary><b><i>238.What's a "target group" in regards to ELB?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A target group is a logical collection of specific resources such as EC2 instances, containers, or IP addresses—that receive traffic routed by a listener. It also handles health checks for those resources to ensure traffic is only sent to healthy, operational targets.
+
+</details>
+
+<details>
+<summary><b><i>239.Which load balancer would you use for services which use HTTP or HTTPS traffic?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Application Load Balancer (ALB).
+
+</details>
+
+<details>
+<summary><b><i>240.What are some use cases for using Gateway Load Balancer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Intrusion Detection
+- Firewall
+- Payload manipulation
+
+</details>
