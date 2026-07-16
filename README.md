@@ -4230,7 +4230,7 @@ $\color{green}{\text{Answer}}$
 </details>
 
 <details>
-<summary><b><i>237.What's a "listener" in regards to ELB?
+<summary><b><i>237.What's a "listener" in regards to ELB?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
