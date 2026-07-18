@@ -4266,3 +4266,48 @@ $\color{green}{\text{Answer}}$
 - Payload manipulation
 
 </details>
+
+<details>
+<summary><b><i>241.Explain "health checks" in the context of AWS ELB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Intrusion Detection
+- Firewall
+- Payload manipulation
+
+</details>
+
+<details>
+<summary><b><i>242.Explain "health checks" in the context of AWS ELB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Health checks used by ELB to check whether EC2 instance(s) are properly working.
+
+If health checks fail, ELB knows to not forward traffic to that specific EC2 instance where the health checks failed.
+
+</details>
+
+<details>
+<summary><b><i>243.True or False? AWS ELB health checks are done on a port and a route.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+For example, port `2017` and endpoint `/health`.
+
+</details>
+
+<details>
+<summary><b><i>244.What types of load balancers are supported in EC2 and what are they used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Application LB - layer 7 traffic
+- Network LB - ultra-high performances or static IP address (layer 4)
+- Classic LB - low costs, good for test or dev environments (retired by August 15, 2022)
+- Gateway LB - transparent network gateway and and distributes traffic such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems. (layer 3)
+
+</details>
