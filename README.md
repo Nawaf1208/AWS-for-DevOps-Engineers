@@ -4311,3 +4311,174 @@ $\color{green}{\text{Answer}}$
 - Gateway LB - transparent network gateway and and distributes traffic such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems. (layer 3)
 
 </details>
+
+<details>
+<summary><b><i>245.Which type of AWS load balancer is used in the following drawing?
+
+![](Diagram-2.png)
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Application Load Balancer (routing based on different endpoints + HTTP is used).
+
+</details>
+
+<details>
+<summary><b><i>246.What are possible target groups for ALB (Application Load Balancer)?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- EC2 tasks
+
+- ECS instances
+
+- Lambda functions
+
+- Private IP Addresses
+
+</details>
+
+<details>
+<summary><b><i>247.True or False? ALB can route only to a single route group.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. ALB can route to multiple target groups.
+
+</details>
+
+<details>
+<summary><b><i>248.If you wanted to analyze network traffic, you would use the `____ load balancer`.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Gateway Load Balancer
+
+</details>
+
+<details>
+<summary><b><i>249.Who has better latency? Application Load Balancer or Network Load Balancer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Network Load Balancer (~100 ms) as Application Load Balancer has a latency of ~400 ms
+
+</details>
+
+<details>
+<summary><b><i>250.True or False? Network load balancer has one static IP per availability zone.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>251.What are the supported target groups for network load balancer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- EC2 instance
+
+- IP addresses
+
+- Application Load Balancer
+
+</details>
+
+<details>
+<summary><b><i>252.What are the supported target groups for gateway load balancer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- EC2 instance
+
+- IP addresses (must be private IPs)
+
+</details>
+
+<details>
+<summary><b><i>253.Name one use case for using application load balancer as a target group for network load balancer.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+You might want to have a fixed IP address (NLB) and then forward HTTP traffic based on path, query, ... which is then done by ALB
+
+</details>
+
+<details>
+<summary><b><i>254.What are some use cases for using Network Load Balancer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- TCP, UDP traffic
+
+- Extreme performance
+
+</details>
+
+<details>
+<summary><b><i>255.True or False? Network load balancers operate in layer 4.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. They forward TCP, UDP traffic.
+
+</details>
+
+<details>
+<summary><b><i>256.True or False? It's possible to enable sticky session for network load balancer so the same client is always redirected to the same instance.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. This is only supported in Classic Load Balancer and Application Load Balancer.
+
+</details>
+
+<details>
+<summary><b><i>256.Explain Cross Zone Load Balancing.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+With cross zone load balancing, traffic distributed evenly across all (registered) instances in all the availability zones.
+
+</details>
+
+<details>
+<summary><b><i>257.True or False? For network load balancer, cross zone load balancing is always on and can't be disabled.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. It's disabled by default
+
+</details>
+
+<details>
+<summary><b><i>258.True or False? In regards to cross zone load balancing, AWS charges you for inter AZ data in network load balancer but no in application load balancer.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. It charges for inter AZ data in network load balancer, but not in application load balancer.
+
+</details>
+
+<details>
+<summary><b><i>259.True or False? Both ALB and NLB support multiple listeners with multiple SSL certificates.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>260.Explain Deregistration Delay (or Connection Draining) in regards to ELB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The period of time or process of "draining" instances from requests/traffic (basically let it complete all active connections but don't start new ones) so it can be de-registered eventually and ELB won't send requests/traffic to it anymore.
+
+</details>
