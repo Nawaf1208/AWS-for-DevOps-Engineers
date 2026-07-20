@@ -4513,3 +4513,127 @@ $\color{green}{\text{Answer}}$
 True
 
 </details>
+
+## Auto Scaling Group
+
+<details>
+<summary><b><i>264.Explain Auto Scaling Group.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+An Auto Scaling group contains a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. An Auto Scaling group also enables you to use Amazon EC2 Auto Scaling features such as health check replacements and scaling policies.
+
+</details>
+
+<details>
+<summary><b><i>265.You have two instance running as part of ASG. You change the desired capacity to 1. What will be the outcome of this change?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+One of the instances will be terminated.
+
+</details>
+
+<details>
+<summary><b><i>266.How can you customize the trigger for the scaling in/out of an auto scaling group?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+One way is to use CloudWatch alarms where an alarm will monitor a metric and based on a certain value (or range) you can choose to scale-in or scale-out the ASG.
+
+</details>
+
+<details>
+<summary><b><i>267.What are some metrics/rules used for auto scaling.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Network In/Out
+- Number of requests on ELB per instance
+- Average CPU, RAM usage
+
+</details>
+
+<details>
+<summary><b><i>268.What is dynamic Scaling policy in regards to Auto Scaling Groups?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A policy in which scaling will occur automatically based on different metrics.
+
+There are 3 types:
+
+1. Target Tracking Scaling: scale when the baseline changes (e.g. CPU is over 60%)
+
+2. Step Scaling: more granular scaling where you can choose different actions for different metrics values (e.g. when CPU less than 20%, remove one instance. When CPU is over 40%, add 3 instances)
+
+3. Scheduled Actions: set in advance scaling for specific period of time (e.g. add instances on Monday between 10:00 am to 11:00 am)
+
+</details>
+
+<details>
+<summary><b><i>269.What is a predictive scaling policy in regards to Auto Scaling Groups?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Scale by analyzing historical load and schedule scaling based on forecast load.
+
+</details>
+
+<details>
+<summary><b><i>270.Explain scaling cooldowns in regards to Auto Scaling Groups.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+During a scaling cooldown, ASG will not terminate or launch additional instances. The cooldown happens after scaling activity and the reason for this behaviour is that some metrics have to be collected and stabilize before another scaling operating can take place.
+
+</details>
+
+<details>
+<summary><b><i>271.Explain the default ASG termination policy.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. It finds the AZ which the most number of EC2 instances
+
+2. If number of instances > 1, choose the one with oldest launch configuration, template and terminate it
+
+</details>
+
+<details>
+<summary><b><i>272.True or False? by default, ASG tries to balance the number of instances across AZ.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True, this is why when it terminates instances, it chooses the AZ with the most instances.
+
+</details>
+
+<details>
+<summary><b><i>273.Explain Lifecycle hooks in regards to Auto Scaling Groups.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Lifecycle hooks allows you perform extra steps before the instance goes in service (During pending state) or before it terminates (during terminating state).
+
+</details>
+
+<details>
+<summary><b><i>274.If you use ASG and you would like to run extra steps before the instance goes in service, what will you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Lifecycle hooks in pending state.
+
+</details>
+
+<details>
+<summary><b><i>275.Describe one way to test ASG actually works.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+In Linux instances, you can install the 'stress' package and run stress to load the system for certain period of time and see if ASG kicks in by adding additional capacity (= more instances).
+
+For example: `sudo stress --cpu 100 --timeout 20`
+
+</details>
