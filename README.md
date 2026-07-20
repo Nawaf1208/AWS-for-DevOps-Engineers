@@ -4482,3 +4482,34 @@ $\color{green}{\text{Answer}}$
 The period of time or process of "draining" instances from requests/traffic (basically let it complete all active connections but don't start new ones) so it can be de-registered eventually and ELB won't send requests/traffic to it anymore.
 
 </details>
+
+### NLB
+
+<details>
+<summary><b><i>261.At what network level/layer a Network Load Balancer operates?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Layer 4
+
+</details>
+
+### ALB
+
+<details>
+<summary><b><i>262.True or False? With ALB (Application Load Balancer) it's possible to do routing based on query string and/or headers.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>263.True or False? For application load balancer, cross zone load balancing is always on and can't be disabled.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
