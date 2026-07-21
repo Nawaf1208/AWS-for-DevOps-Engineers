@@ -4637,3 +4637,82 @@ In Linux instances, you can install the 'stress' package and run stress to load 
 For example: `sudo stress --cpu 100 --timeout 20`
 
 </details>
+
+## Security
+
+<details>
+<summary><b><i>276.What is the shared responsibility model? What AWS is responsible for and what the user is responsible for based on the shared responsibility model?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The shared responsibility model defines what the customer is responsible for and what AWS is responsible for.
+
+</details>
+
+<details>
+<summary><b><i>277.True or False? Based on the shared responsibility model, Amazon is responsible for physical CPUs and security groups on instances.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. It is responsible for Hardware in its sites but not for security groups which created and managed by the users.
+
+</details>
+
+<details>
+<summary><b><i>278.Explain "Shared Controls" in regards to the shared responsibility model.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Apply to both the infrastructure layer and customer layers, but in completely separate contexts or perspectives. In a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services.
+
+</details>
+
+<details>
+<summary><b><i>279.What is the AWS compliance program?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The AWS Compliance Program helps organizations understand and verify that AWS infrastructure meets global security, privacy, and regulatory standards (such as HIPAA, SOC, and GDPR). It provides access to independent audit reports, certifications, and tools to help customers build compliant cloud applications.
+
+</details>
+
+<details>
+<summary><b><i>280.How to secure instances in AWS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Instance IAM roles should have minimal permissions needed. You don't want an instance-level incident to become an account-level incident
+
+- Use "AWS System Manager Session Manager" for SSH
+
+- Using latest OS images with your instances
+
+</details>
+
+<details>
+<summary><b><i>281.What is AWS Artifact?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Artifact is your go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS’ security and compliance reports and select online agreements.
+
+</details>
+
+<details>
+<summary><b><i>282.What is AWS Inspector?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications for exposure, vulnerabilities, and deviations from best practices.
+
+</details>
+
+<details>
+<summary><b><i>283.What is AWS Guarduty?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your Amazon Web Services accounts, workloads, and data stored in Amazon S3.
+Monitor VPC Flow lows, DNS logs, CloudTrail S3 events and CloudTrail Mgmt events.
+
+</details>
