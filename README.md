@@ -4716,3 +4716,132 @@ Amazon GuardDuty is a threat detection service that continuously monitors for ma
 Monitor VPC Flow lows, DNS logs, CloudTrail S3 events and CloudTrail Mgmt events.
 
 </details>
+
+<details>
+<summary><b><i>284.What is AWS Shield?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS.
+
+</details>
+
+<details>
+<summary><b><i>285.What is AWS WAF? Give an example of how it can used and describe what resources or services you can use it with.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS WAF (Web Application Firewall) protects web applications from common web exploits and bots by monitoring and filtering incoming HTTP(S) traffic based on customizable security rules.
+
+Example: You can use it to automatically block SQL injection attempts, rate-limit excessive traffic from a single IP to prevent DDoS attacks, or restrict access to specific geographic regions.
+
+Integrates with: Amazon CloudFront, Application Load Balancer (ALB), Amazon API Gateway, AWS AppSync, and Amazon Cognito.
+
+</details>
+
+<details>
+<summary><b><i>286.What AWS VPN is used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS VPN establishes secure, encrypted connections between your network (or user device) and AWS resources over the public internet.
+
+Example: Connect your corporate office network directly to your private AWS VPC so employees can securely access internal databases, or give remote workers secure access via a client VPN app.
+
+Integrates with: Amazon VPC, AWS Site-to-Site VPN, AWS Client VPN, and AWS Transit Gateway.
+
+</details>
+
+<details>
+<summary><b><i>287.What is the difference between Site-to-Site VPN and Client VPN?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Site-to-Site VPN links an entire corporate network to AWS (router-to-gateway), while AWS Client VPN links individual remote users directly to AWS (device-to-gateway).
+
+Example: Use Site-to-Site VPN to permanently connect your office datacenter to your VPC, and Client VPN to let work-from-home employees log in securely using openVPN-compatible software.
+
+Integrates with: Amazon VPC, AWS Transit Gateway, active directory (Client VPN), and hardware customer gateways (Site-to-Site).
+
+</details>
+
+<details>
+<summary><b><i>288.What is AWS CloudHSM?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud.
+
+</details>
+
+<details>
+<summary><b><i>289.True or False? AWS Inspector can perform both network and host assessments.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>290.What is AWS Key Management Service (KMS)?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+KMS makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications.
+
+</details>
+
+<details>
+<summary><b><i>291.What is AWS Acceptable Use Policy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It describes prohibited uses of the web services offered by AWS.
+
+</details>
+
+<details>
+<summary><b><i>292.True or False? A user is not allowed to perform penetration testing on any of the AWS services.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. On some services, like EC2, CloudFront and RDS, penetration testing is allowed.
+
+</details>
+
+<details>
+<summary><b><i>293.True or False? DDoS attack is an example of allowed penetration testing activity.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False
+
+</details>
+
+<details>
+<summary><b><i>294.True or False? AWS Access Key is a type of MFA device used for AWS resources protection.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Security key is an example of an MFA device.
+
+</details>
+
+<details>
+<summary><b><i>295.What is Amazon Cognito?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Cognito handles user authentication and authorization for your web and mobile apps.
+
+</details>
+
+<details>
+<summary><b><i>296.What is AWS ACM?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.
+
+</details>
