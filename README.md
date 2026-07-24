@@ -5124,3 +5124,41 @@ $\color{green}{\text{Answer}}$
 Aurora multi-master is perfect for a use case where you want to have instant failover for write node.
 
 </details>
+
+### DynamoDB
+
+<details>
+<summary><b><i>322.What is AWS DynamoDB?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon DynamoDB is a fully managed, serverless NoSQL database service from AWS that provides fast, single-digit millisecond performance and seamless auto-scaling at any scale.
+
+</details>
+
+<details>
+<summary><b><i>323.Explain "Point-in-Time Recovery" feature in DynamoDB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+You can create on-demand backups of your Amazon DynamoDB tables, or you can enable continuous backups using point-in-time recovery.
+
+</details>
+
+<details>
+<summary><b><i>324.Explain "Global Tables" in DynamoDB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A global table is a collection of one or more replica tables, all owned by a single AWS account.
+
+</details>
+
+<details>
+<summary><b><i>325.What is DynamoDB Accelerator?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds...
+
+</details>
