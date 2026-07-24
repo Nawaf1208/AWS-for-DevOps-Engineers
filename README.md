@@ -5043,3 +5043,84 @@ $\color{green}{\text{Answer}}$
 True. Since read replicas add endpoints, each with its own DNS name, you need to modify your app to reference these new endpoints to balance the load read.
 
 </details>
+
+### Aurora
+
+<details>
+<summary><b><i>315.What do you know about Amazon Aurora?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- A MySQL & Postgresql based relational database.
+
+- Proprietary technology from AWS
+
+- The default database proposed for the user when using RDS for creating a database.
+
+- Storage automatically grows in increments of 10 GiB
+
+- HA native - failover in instant
+
+- Has better performances over MySQL and Postgres
+
+- Supports 15 replicas (while MySQL supports 5)
+
+</details>
+
+<details>
+<summary><b><i>316.True or False? Aurora stores 4 copies of your data across 2 availability zones.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. It stores 6 copies across 3 availability zones.
+
+</details>
+
+<details>
+<summary><b><i>317.True or False? Aurora support self healing where corrupted data replaced by doing peer-to-peer replication.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>318.True or False? Aurora storage is striped across 20 volumes.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. 100 volumes.
+
+</details>
+
+<details>
+<summary><b><i>319.True or False? It's possible to scale Aurora replicas.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. If your read replica instances exhaust their CPU, you can scale by adding more instances
+
+</details>
+
+<details>
+<summary><b><i>320.Explain Aurora Serverless. What use cases is it good for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Aurora serverless is an automated database instantiation and it's auto scaled based on an actual usage.
+
+- It's good mainly for infrequent or unpredictable workflows.
+
+- You pay per second so it can eventually be more cost effective.
+
+</details>
+
+<details>
+<summary><b><i>321.What is the use case for Aurora multi-master?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Aurora multi-master is perfect for a use case where you want to have instant failover for write node.
+
+</details>
