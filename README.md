@@ -4845,3 +4845,106 @@ $\color{green}{\text{Answer}}$
 AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources.
 
 </details>
+
+## Databases
+
+### RDS
+
+<details>
+<summary><b><i>297.What is AWS RDS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Relational Database Service
+
+- Managed DB service (you can't ssh the machine)
+
+- Supports multiple DBs: MySQL, Oracle, Aurora (AWS Proprietary), ...
+
+</details>
+
+<details>
+<summary><b><i>298.Why to use AWS RDS instead of launching an EC2 instance and install a database on it?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS RDS is a managed service, that means it's automatically provisioned and patched for you.
+
+In addition, it provides you with continuous backup (and the ability to restore from any point of time), scaling capability (both horizontal and vertical), monitoring dashboard and read replicas.
+
+</details>
+
+<details>
+<summary><b><i>299.What do you know about RDS backups?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Automated backups
+
+- Full daily backup (done during maintenance window)
+
+- Transactions logs backup every 5 minutes
+
+- Retention can be increased and by default it's 7 days
+
+</details>
+
+<details>
+<summary><b><i>300.Explain AWS RDS Storage Auto Scaling.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- RDS storage can automatically be increased upon lack in storage
+
+- The user needs to set "Maximum Storage Threshold" to have some limit on storage scaling
+
+- Use cases: applications with unpredictable workloads
+
+- Supports multiple RDS database engines
+
+</details>
+
+<details>
+<summary><b><i>301.Explain Amazon RDS Read Replicas.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon RDS Read Replicas provide enhanced performance and durability for RDS database (DB) instances. They make it easy to elastically scale out beyond the capacity constraints of a single DB instance for read-heavy database workloads.
+
+</details>
+
+<details>
+<summary><b><i>302.True or False? RDS read replicas are supported within az, cross az and cross region.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>303.True or False? RDS read replicas are asynchronous.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. This is done so the reads are consistent.
+
+</details>
+
+<details>
+<summary><b><i>304.True or False? Amazon RDS supports MongoDB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. RDS is relational database and MongoDB is a NoSQL db.
+
+</details>
+
+<details>
+<summary><b><i>305.What are some use cases for using RDS read replicas?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+You have a main application which works against your database but you would like to add additional app, one used for logging, analytics, ... so you prefer it won't use the same database. In this case, you create a read replica instance and the second application works against that instance.
+
+</details>
