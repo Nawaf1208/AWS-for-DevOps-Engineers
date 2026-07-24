@@ -4948,3 +4948,98 @@ $\color{green}{\text{Answer}}$
 You have a main application which works against your database but you would like to add additional app, one used for logging, analytics, ... so you prefer it won't use the same database. In this case, you create a read replica instance and the second application works against that instance.
 
 </details>
+
+<details>
+<summary><b><i>306.Explain RDS Multi Availability Zone.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- RDS multi AZ used mainly for disaster recovery purposes.
+
+- There is an RDS master instance and in another AZ an RDS standby instance.
+
+- The data is synced synchronously between them.
+
+- The user, application is accessing one DNS name and where there is a failure with the master instance, the DNS name moves to the standby instance, so the failover done automatically.
+
+</details>
+
+<details>
+<summary><b><i>307.True or False? Moving AWS RDS from single AZ to multi AZ is an operation with downtime (meaning there is a need to stop the DB).</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. It's a zero downtime operation = no need to stop the database.
+
+</details>
+
+<details>
+<summary><b><i>308.How AWS RDS switches from single AZ to multi AZ?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. Snapshot is taken by RDS
+
+2. The snapshot is restored to another, standby, RDS instance
+
+3. Synchronization is enabled between the two instances
+
+</details>
+
+<details>
+<summary><b><i>309.True or False? RDS encryption should be defined at launch time.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>310.True or False? in regards to RDS, replicas can be encrypted even if the master isn't encrypted.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False
+
+</details>
+
+<details>
+<summary><b><i>311.How to make RDS snapshots encrypted?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- If RDS database is encrypted then, the snapshot itself is also encrypted
+
+- If RDS database isn't encrypted then, the snapshot itself isn't encrypted and then you can copy the un-encrypted snapshot to created an encrypted copy
+
+</details>
+
+<details>
+<summary><b><i>312.How to encrypt an un-encrypted RDS instance?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Create a copy of the un-encrypted instance `->` copy the snapshot to create an encrypted copy `->` restore the database from the encrypted snapshot `->` migrate the application to work against the copied instance `->` remove the original DB instance
+
+</details>
+
+<details>
+<summary><b><i>313.How IAM authentication works with RDS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. EC2 instance uses IAM role to make an API call to get auth token.
+
+2. The token, with SSL encryption, is used for accessing the RDS instance.
+
+</details>
+
+<details>
+<summary><b><i>314.True or False? In case of RDS (not Aurora), read replicas require you to change the SQL connection string.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. Since read replicas add endpoints, each with its own DNS name, you need to modify your app to reference these new endpoints to balance the load read.
+
+</details>
