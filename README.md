@@ -5275,7 +5275,7 @@ $\color{green}{\text{Answer}}$
 
 - Check for table locks and kill irrelevant locking sessions.
 
-</details
+</details>
 
 <details>
 <summary><b><i>336.What is Amazon DocumentDB?</i></b></summary>
