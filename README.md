@@ -5162,3 +5162,91 @@ $\color{green}{\text{Answer}}$
 Amazon DynamoDB Accelerator (DAX) is a fully managed, highly available, in-memory cache for DynamoDB that delivers up to a 10x performance improvement – from milliseconds to microseconds...
 
 </details>
+
+### ElastiCache
+
+<details>
+<summary><b><i>326.What is AWS ElastiCache? In what use case should it be used?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Elasticache is a fully managed Redis or Memcached in-memory data store.
+
+It's great for read-intensive workloads where the common data/queries are cached and apps/users access the cache instead of the primary database.
+
+</details>
+
+<details>
+<summary><b><i>327.Describe the workflow of an application using the cache in AWS.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+1. The application performs a query against the DB. There is a check to see if the data is in the cache
+
+2. If it is, it's a "cache hit" and the data is retrieved from there
+
+3. If it's not in there, it's a "cache miss" and the data is pulled from the database
+
+4. The data is then also written to the cache (assuming it is often accessed) and next time the user queries for the same data, it might be retrieved from the cache (depends on how much time passed and whether this specific data was invalidated or not)
+
+</details>
+
+<details>
+<summary><b><i>328.How can you make an application stateless using ElastiCache?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Let's say you have multiple instances running the same application and every time you use the application, it creates a user session.
+
+This user session can be stored in ElastiCache so even if the user contacts a different instance of the application, the application can retrieve the session from the ElastiCache.
+
+</details>
+
+<details>
+<summary><b><i>329.You need a highly available cache with backup and restore features. Which one would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+ElastiCache Redis
+
+</details>
+
+<details>
+<summary><b><i>330.You need a cache with read replicas that can be scaled and one support multi AZ. Which one would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+ElastiCache Redis
+
+</details>
+
+<details>
+<summary><b><i>331.You need a cache that supports sharding and built with multi-threaded architecture in mind. Which one would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+ElastiCache Memcached
+
+</details>
+
+<details>
+<summary><b><i>332.True or False? ElastiCache doesn't supports IAM authentication.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>333.What patterns are there for loading data into the cache?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Write Through: add or update data in the cache when the data is written to the DB
+
+- Lazy Loading: all the read data is cached
+
+- Session Store: store temporary session data in cache
+
+</details>
