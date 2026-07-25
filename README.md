@@ -5250,3 +5250,58 @@ $\color{green}{\text{Answer}}$
 - Session Store: store temporary session data in cache
 
 </details>
+
+### RedShift
+
+<details>
+<summary><b><i>334.What is AWS Redshift and how is it different than RDS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Cloud data warehouse
+
+</details>
+
+<details>
+<summary><b><i>335.What do you if you suspect AWS Redshift performs slowly?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- You can confirm your suspicion by going to AWS Redshift console and see running queries graph. This should tell you if there are any long-running queries.
+
+- If confirmed, you can query for running queries and cancel the irrelevant queries.
+
+- Check for connection leaks (query for running connections and include their IP).
+
+- Check for table locks and kill irrelevant locking sessions.
+
+</details
+
+<details>
+<summary><b><i>336.What is Amazon DocumentDB?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon DocumentDB (with MongoDB compatibility) is a fast, scalable, highly available, and fully managed document database service that supports MongoDB workloads. As a document database, Amazon DocumentDB makes it easy to store, query, and index JSON data.
+
+</details>
+
+<details>
+<summary><b><i>337.What "AWS Database Migration Service" is used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Database Migration Service (AWS DMS) is a fully managed cloud service used to securely migrate and continuously replicate databases, data warehouses, and other data stores to AWS with minimal downtime. 
+
+It supports both homogeneous migrations (e.g., MySQL to MySQL) and heterogeneous migrations across different database engines (e.g., Oracle to Amazon Aurora).
+
+</details>
+
+<details>
+<summary><b><i>338.What type of storage is used by Amazon RDS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+EBS
+
+</details>
