@@ -5518,9 +5518,9 @@ AWS WAF
 <details>
 <summary><b><i>362.You would like to monitor some of your resources in the different services. Which service would you use for that?</i></b></summary>
 
-CloudWatch
-
 $\color{green}{\text{Answer}}$
+
+CloudWatch
 
 </details>
 
