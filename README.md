@@ -5305,3 +5305,340 @@ $\color{green}{\text{Answer}}$
 EBS
 
 </details>
+
+## Identify the Service
+
+<details>
+<summary><b><i>339.What would you use for automating code/software deployments?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CodeDeploy
+
+</details>
+
+<details>
+<summary><b><i>340.You would like to invoke a function every time you enter a URL in the browser. Which service would you use for that?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Lambda
+
+</details>
+
+<details>
+<summary><b><i>341.What would you use for easily creating similar AWS environments/resources for different customers?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+CloudFormation
+
+</details>
+
+<details>
+<summary><b><i>342.Using which service, can you add user sign-up, sign-in and access control to mobile and web apps?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Cognito
+
+</details>
+
+<details>
+<summary><b><i>343.Which service would you use for building a website or web application?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Lightsail
+
+</details>
+
+<details>
+<summary><b><i>344.Which tool would you use for choosing between Reserved instances or On-Demand instances?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Cost Explorer
+
+</details>
+
+<details>
+<summary><b><i>345.What would you use to check how many unassociated Elastic IP address you have?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Trusted Advisor
+
+</details>
+
+<details>
+<summary><b><i>346.Which service allows you to transfer large amounts (Petabytes) of data in and out of the AWS cloud?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Snowball
+
+</details>
+
+<details>
+<summary><b><i>347.Which service would you use if you need a data warehouse?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS RedShift
+
+</details>
+
+<details>
+<summary><b><i>348.Which service provides a virtual network dedicated to your AWS account?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+VPC
+
+</details>
+
+<details>
+<summary><b><i>349.What you would use for having automated backups for an application that has MySQL database layer?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Aurora
+
+</details>
+
+<details>
+<summary><b><i>350.What would you use to migrate on-premise database to AWS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Database Migration Service (DMS)
+
+</details>
+
+<details>
+<summary><b><i>351.What would you use to check why certain EC2 instances were terminated?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CloudTrail
+ 
+</details>
+
+<details>
+<summary><b><i>352.What would you use for SQL database?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS RDS
+
+</details>
+
+<details>
+<summary><b><i>353.What would you use for NoSQL database?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS DynamoDB
+
+</details>
+
+<details>
+<summary><b><i>354.What would you use for adding image and video analysis to your application?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Rekognition
+
+</details>
+
+<details>
+<summary><b><i>355.Which service would you use for debugging and improving performances issues with your applications?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS X-Ray
+
+</details>
+
+<details>
+<summary><b><i>356.Which service is used for sending notifications?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SNS
+
+</details>
+
+<details>
+<summary><b><i>357.What would you use for running SQL queries interactively on S3?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Athena
+
+</details>
+
+<details>
+<summary><b><i>358.What would you use for preparing and combining data for analytics or ML?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Glue
+
+</details>
+
+<details>
+<summary><b><i>359.Which service would you use for monitoring malicious activity and unauthorized behavior in regards to AWS accounts and workloads?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon GuardDuty
+
+</details>
+
+<details>
+<summary><b><i>360.Which service would you use for centrally manage billing, control access, compliance, and security across multiple AWS accounts?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Organizations
+
+</details>
+
+<details>
+<summary><b><i>361.Which service would you use for web application protection?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS WAF
+
+</details>
+
+<details>
+<summary><b><i>362.You would like to monitor some of your resources in the different services. Which service would you use for that?
+
+CloudWatch
+
+$\color{green}{\text{Answer}}$
+
+</details>
+
+<details>
+<summary><b><i>363.Which service would you use for performing security assessment?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Inspector
+
+</details>
+
+<details>
+<summary><b><i>364.Which service would you use for creating DNS record?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Route 53
+
+</details>
+
+<details>
+<summary><b><i>365.What would you use if you need a fully managed document database?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon DocumentDB
+
+</details>
+
+<details>
+<summary><b><i>366.Which service would you use to add access control (or sign-up, sign-in forms) to your web/mobile apps?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Cognito
+
+</details>
+
+<details>
+<summary><b><i>367.Which service is often referred to as "used for decoupling applications"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS SQS. Since it's a messaging queue so it allows applications to switch from synchronous communication to asynchronous one.
+
+</details>
+
+<details>
+<summary><b><i>368.Which service would you use if you need messaging queue?
+
+$\color{green}{\text{Answer}}$
+
+Simple Queue Service (SQS)
+
+</details>
+
+<details>
+<summary><b><i>369.Which service would you use if you need managed DDOS protection?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Shield
+
+</details>
+
+<details>
+<summary><b><i>370.Which service would you use if you need store frequently used data for low latency access?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+ElastiCache
+
+</details>
+
+<details>
+<summary><b><i>371.What would you use to transfer files over long distances between a client and an S3 bucket?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon S3 Transfer Acceleration
+
+</details>
+
+<details>
+<summary><b><i>372.Which services are involved in getting a custom string (based on the input) when inserting a URL in the browser?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Lambda - to define a function that gets an input and returns a certain string.
+
+API Gateway - to define the URL trigger (= when you insert the URL, the function is invoked).
+
+</details>
+
+<details>
+<summary><b><i>373.Which service would you use for data or events streaming?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Kinesis
+
+</details>
+
+<details>
+<summary><b><i>374.Which (free) tool would you use to get information on cost savings?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Trusted Advisor
+
+</details>
+
+<details>
+<summary><b><i>375.You would like to have on-prem storage access to AWS storage. What would you use for that?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Storage Gateway
+
+</details>
