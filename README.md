@@ -5642,3 +5642,343 @@ $\color{green}{\text{Answer}}$
 Storage Gateway
 
 </details>
+
+## DNS (Route 53)
+
+<details>
+<summary><b><i>376.What is Route 53?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Route 53 is a highly available and scalable cloud Domain Name System (DNS) web service.
+
+Features:
+- Register domains
+
+- DNS service - domain name translations
+
+- Health checks - verify your app is available
+
+- Not a feature but its SLA is 100% availability
+
+</details>
+
+<details>
+<summary><b><i>377.What it means that "Route 53 is an Authoritative DNS"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The customer can update DNS records.
+
+</details>
+
+<details>
+<summary><b><i>378.What each Route 53 record contains?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Domain/subdomain name (e.g. blipblop.com)
+
+- Value (e.g. 201.7.202.2)
+
+- Record type (e.g. A, AAAA, MX)
+
+- TTL: amount of time the record is going to be cached
+
+- Routing Policy: how to respond to queries
+
+</details>
+
+<details>
+<summary><b><i>379.What DNS record types does Route 53 supports?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- A
+- AAAA
+- CNAME
+- NS
+- DS
+- CAA
+- SOA
+- MX
+- TXT
+- SPF
+- SRV
+- NAPTR
+- PTR
+
+</details>
+
+<details>
+<summary><b><i>380.What are hosted zones?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A container that includes records for defining how to route traffic from a domain and its subdomains.
+
+</details>
+
+<details>
+<summary><b><i>381.What types of hosted zones are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Public Hosted Zones - include records to specify how to route traffic on the internet.
+
+- Private Hosted Zones - contain records that specify how you traffic within VPC(s).
+
+</details>
+
+<details>
+<summary><b><i>382.What is the difference between CNAME record and an Alias record?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+CNAME is used for mapping one hostname to any other hostname while Alias is used to map an hostname to an AWS resource.
+
+In addition, Alias work for both root domain (somedomain.com) and non-root domain, while CNAME works only with non-root domain (foo.somedomain.com).
+
+</details>
+
+<details>
+<summary><b><i>383.True or False? Alias record can be set up for an EC2 DNS name.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False
+
+</details>
+
+<details>
+<summary><b><i>384.True or False? Alias record can be set up for an VPC interface endpoint.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>385.True or False? Alias record is only of type A or AAAA.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>386.What is a routing policy in regards to AWS Route 53?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A routing policy routing defines how Route 53 responds to DNS queries.
+
+</details>
+
+<details>
+<summary><b><i>387.What Route 53 routing policies are there?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Simple
+- Geolocation
+- Failover
+- Latency based
+- Geoproximity
+- Multi-Value Answer
+- Weighted
+
+</details>
+
+<details>
+<summary><b><i>388.Suppose you need to route % of your traffic to a certain instance and the rest of the traffic, to another instance. Which routing policy would you choose?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Weighted routing policy
+
+</details>
+
+<details>
+<summary><b><i>389.Suppose you need to route traffic to a single source with Route 53, without any other requirements, which routing policy would you choose?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The `simple` routing policy
+
+</details>
+
+<details>
+<summary><b><i>390.Explain the geolocation routing policy.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Routing based on user location
+
+- Location can be specified by continent, country or US state
+
+- It's recommended to have a default record in case there is no match on location
+
+</details>
+
+<details>
+<summary><b><i>391.What are some use cases for using geolocation routing policy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Restrict content distribution
+
+- App localization
+
+- Load balancing
+
+</details>
+
+<details>
+<summary><b><i>392.Explain the geoproximity routing policy.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Route based on the geographic location of resources
+
+- Shifting routing is done based on the bias value
+
+- Resources can be of AWS and non-AWS type
+  - For non-AWS you have to specify latitude and longitude in addition to AWS region as done in AWS-based resources
+
+- To use it, you have to use Route 53 traffic flow
+
+</details>
+
+<details>
+<summary><b><i>393.What are some use cases for weighted routing policy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- Load balancing between regions
+
+- Testing new applications versions
+
+</details>
+
+<details>
+<summary><b><i>394.True or False? Route 53 simple routing policy supports both single and multiple values.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+If multiple values are returned from Route 53 then, the client chooses a single value to use.
+
+</details>
+
+<details>
+<summary><b><i>395.True or False? In weighted routing DNS records must have the same name but not the same type.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. They must have the same name AND type.
+
+</details>
+
+<details>
+<summary><b><i>396.You would like to use a routing policy that will take latency into account and will route to the resource with the lowest latency. Which routing policy would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Latency-based routing policy
+
+</details>
+
+<details>
+<summary><b><i>397.What happens when you set all records to weight 0 when using Weighted routing policy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+All records are used equally.
+
+</details>
+
+<details>
+<summary><b><i>398.What Route 53 health checks are used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Automated DNS failover based on monitoring:
+
+- Another health check
+
+- endpoint (app, AWS resource, server)
+
+- CloudWatch alarms
+
+</details>
+
+<details>
+<summary><b><i>399.You would like to use a routing policy based on the resource location and be able to shift more traffic to some resources. Which one would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Geoproximity routing policy
+
+</details>
+
+<details>
+<summary><b><i>400.Explain Route 53 Traffic Flow feature.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It's a visual editor for managing complex routing decision trees. It allows you to simplify the process of managing records.
+
+Configuration can be saved (as Traffic Flow Policy) and applied to different domains/hosted zones. In addition, it supports versioning.
+
+</details>
+
+<details>
+<summary><b><i>401.What are calculated health checks?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+When you combine the results of multiple health checks into a single health check.
+
+</details>
+
+<details>
+<summary><b><i>402.What is one possible use case for using calculated health checks?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Performing maintenance for a website without causing all the health checks to fail.
+
+</details>
+
+<details>
+<summary><b><i>403.You would like to use a routing policy based on the user location. Which one would you use?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Geolocation routing policy. It's based on user location.
+
+Don't confuse it with latency-based routing policy. While shorter distance may result in lower latency, this is not the requirement in the question.
+
+</details>
+
+<details>
+<summary><b><i>404.True or False? Route 53 Multi Value is a substitute for those who want cheaper solution than ELB.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. Route 53 Multi Value is not a substitute for ELB. It's focused on client-side load balancing as opposed to ELB.
+
+</details>
+
+<details>
+<summary><b><i>405.True or False? Domain registrar and DNS service is inherently the same thing.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. DNS service can be Route 53 (where you manage DNS records) while the domain itself can be purchased from other sources that aren't Amazon related (e.g. GoDadday).
+
+</details>
