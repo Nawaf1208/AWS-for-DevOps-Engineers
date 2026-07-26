@@ -5570,7 +5570,7 @@ AWS SQS. Since it's a messaging queue so it allows applications to switch from s
 </details>
 
 <details>
-<summary><b><i>368.Which service would you use if you need messaging queue?
+<summary><b><i>368.Which service would you use if you need messaging queue?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
