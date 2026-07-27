@@ -6117,3 +6117,71 @@ $\color{green}{\text{Answer}}$
 MessageGroupID is a parameter used in message queuing systems to group related messages so they are processed strictly in first-in, first-out (FIFO) order within that specific group.
 
 </details>
+
+## SNS
+
+<details>
+<summary><b><i>418.What is Simply Notification Service?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications.
+
+</details>
+
+<details>
+<summary><b><i>419.Explain the following in regards to SNS:
+  
+- Topics
+- Subscribers
+- Publishers
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Topics -> used for grouping multiple endpoints
+
+Subscribers -> the endpoints where topics send messages to
+
+Publishers -> the provider of the message (event, person, ...)
+
+</details>
+
+<details>
+<summary><b><i>420.How SNS is different from SQS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SNS, as opposed to SQS, works in a publisher/subscriber model. Where's SQS works in Producer/Consumer model.
+
+SQS delivers the message to one consumer where's SNS will send a message to multiple subscribers.
+
+</details>
+
+<details>
+<summary><b><i>421.What's a Fan-Out pattern?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A messaging pattern where a single message is send to multiple destinations (often simultaneously). So one-to-many broadcast message.
+
+</details>
+
+## Monitoring & Logging
+
+<details>
+<summary><b><i>422.What is AWS CloudWatch?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CloudWatch is a monitoring and management service that collects operational data in the form of logs, metrics, and events from your AWS resources and applications. It helps you track performance, set automated alarms, and respond to operational changes in real time.
+
+<details>
+<summary><b><i>423.What is AWS CloudTrail?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account.
+
+</details>
