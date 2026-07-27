@@ -6177,11 +6177,140 @@ $\color{green}{\text{Answer}}$
 
 AWS CloudWatch is a monitoring and management service that collects operational data in the form of logs, metrics, and events from your AWS resources and applications. It helps you track performance, set automated alarms, and respond to operational changes in real time.
 
+</details>
+
 <details>
 <summary><b><i>423.What is AWS CloudTrail?</i></b></summary>
 
 $\color{green}{\text{Answer}}$
 
 AWS CloudTrail is a service that enables governance, compliance, operational auditing, and risk auditing of your AWS account.
+
+</details>
+
+## Billing & Support
+
+<details>
+<summary><b><i>424.What are Service Control Policies and to what service they belong?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+SCPs offer central control over the maximum available permissions for all accounts in your organization, allowing you to ensure your accounts stay within your organization’s access control guidelines.
+
+</details>
+
+<details>
+<summary><b><i>425.Explain AWS pricing model.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It mainly works on "pay-as-you-go" meaning you pay only for what are using and when you are using it. 
+
+In S3 you pay for:
+
+1. How much data you are storing
+2. Making requests (PUT, POST, ...) In EC2 it's based on the purchasing option (on-demand, spot, ...), instance type, AMI type and the region used.
+
+</details>
+
+<details>
+<summary><b><i>426.How do you estimate AWS costs?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- TCO calculator
+- AWS simple calculator
+- Cost Explorer
+- AWS Budgets
+- Cost Allocation Tags
+
+</details>
+
+<details>
+<summary><b><i>427.What basic support in AWS includes?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- 24x7 customer service
+- Trusted Advisor
+- AWS personal Health Dashoard
+
+</details>
+
+<details>
+<summary><b><i>428.How are EC2 instances billed?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+- On-Demand: Pay for compute capacity per second or per hour with no long-term commitment, ideal for short-term, unpredictable, or test workloads.
+
+- Savings Plans: Offers up to 72% discount compared to On-Demand in exchange for committing to a consistent amount of hourly compute spend ($/hr) over a 1- or 3-year term.
+
+- Reserved Instances (RIs): Provides up to 72% discount by committing to a specific instance configuration, region, or family for a 1- or 3-year term (available with upfront or no-upfront payment options).
+
+- Spot Instances: Lets you purchase unused AWS compute capacity at up to 90% discount, but instances can be interrupted with short notice when capacity is reclaimed.
+
+- Dedicated Hosts: Allows you to pay for a physical, isolated server dedicated to your account—useful for meeting strict compliance needs or using existing server-bound software licenses.
+
+</details>
+
+<details>
+<summary><b><i>429.What AWS Pricing Calculator is used for?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Pricing Calculator is a estimation tool that lets you model your architecture and calculate the estimated cost of AWS services based on your expected usage. It helps you plan, budget, and optimize spending before launching or scaling workloads.
+
+</details>
+
+<details>
+<summary><b><i>430.What is Amazon Connect?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Connect is an easy to use omnichannel cloud contact center that helps companies provide superior customer service at a lower cost.
+
+</details>
+
+<details>
+<summary><b><i>431.What are "APN Consulting Partners"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+APN Consulting Partners are professional services firms that help customers of all types and sizes design, architect, build, migrate, and manage their workloads and applications on AWS, accelerating their journey to the cloud.
+
+</details>
+
+<details>
+<summary><b><i>432.Which of the following are AWS accounts types (and are sorted by order)?
+
+- Basic, Developer, Business, Enterprise
+- Newbie, Intermediate, Pro, Enterprise
+- Developer, Basic, Business, Enterprise
+- Beginner, Pro, Intermediate, Enterprise
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Basic, Developer, Business, Enterprise
+
+</details>
+
+<details>
+<summary><b><i>433.True or False? Region is a factor when it comes to EC2 costs/pricing.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. You pay differently based on the chosen region.
+
+</details>
+
+<details>
+<summary><b><i>434.What is "AWS Infrastructure Event Management"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Infrastructure Event Management is a structured program available to Enterprise Support customers (and Business Support customers for an additional fee) that helps you plan for large-scale events such as product or application launches, infrastructure migrations, and marketing events.
 
 </details>
