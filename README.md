@@ -5982,3 +5982,138 @@ $\color{green}{\text{Answer}}$
 False. DNS service can be Route 53 (where you manage DNS records) while the domain itself can be purchased from other sources that aren't Amazon related (e.g. GoDadday).
 
 </details>
+
+## SQS
+
+<details>
+<summary><b><i>406.What is Simple Queue Service (SQS)?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications.
+
+</details>
+
+<details>
+<summary><b><i>407.Explain "producer" and "consumer" in regards to messaging queue.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+Producer is the application or in general, the source that sends messages to the queue.
+
+Consumer is the process or application that pulls the messages from the queue.
+
+</details>
+
+<details>
+<summary><b><i>408.What "default retention of messages" means?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It refers to a retention period in which a message has to consumed/processed and deleted from the queue.
+
+As of today, the retention of a message is 4 days by default and the maximum allows is 14 days.
+
+</details>
+
+<details>
+<summary><b><i>409.What's the limitation on message size in SQS?
+
+- 128KB
+- 128MB
+- 256KB
+- 256MB
+
+</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+256KB
+
+</details>
+
+<details>
+<summary><b><i>410.True or False? It's possible to have duplicated messages in the queue.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True. It's referred to as "at least once delivery".
+
+</details>
+
+<details>
+<summary><b><i>411.True or False? "Consumers" can be only EC2 instances.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+False. They can be Lambda functions and even on-premise instances
+
+</details>
+
+<details>
+<summary><b><i>412.True or False? Processes/Applications use from the SDK the SendMessage API in order to send messages to the queue.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+True
+
+</details>
+
+<details>
+<summary><b><i>413.What it means "best effort ordering" in regards to SQS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It means messages in the queue can be out of order.
+
+</details>
+
+<details>
+<summary><b><i>414.What is "Delay Queue" in regards to SQS?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+It's the time in seconds to delay the delivery of new messages (when they reached the queue already).
+
+The limit as of today is 15 minutes.
+
+</details>
+
+<details>
+<summary><b><i>415.What is "Visibility Timeout"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The time in seconds for a message to not be visible for consumers.
+
+The limit as of today is 12 hours.
+
+</details>
+
+<details>
+<summary><b><i>416.Give an example of architecture or workflow that involves SQS and EC2 & S3.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+A website that allows users to upload videos and adds subtitles to them:
+
+1. First the user uploads the video through the web interface which uploads it to an S3 bucket
+
+2. SQS gets notified with a message on the video location
+
+3. EC2 instance (or Lambda function) starts to work on adding the subtitles
+
+4. The video with the subtitles is uploaded to an S3 buckets
+
+5. SQS gets notified of the result and specifically the video location
+
+</details>
+
+<details>
+<summary><b><i>417.What's MessageGroupID?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+MessageGroupID is a parameter used in message queuing systems to group related messages so they are processed strictly in first-in, first-out (FIFO) order within that specific group.
+
+</details>
