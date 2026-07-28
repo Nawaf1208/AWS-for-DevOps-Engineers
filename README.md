@@ -6314,3 +6314,60 @@ $\color{green}{\text{Answer}}$
 AWS Infrastructure Event Management is a structured program available to Enterprise Support customers (and Business Support customers for an additional fee) that helps you plan for large-scale events such as product or application launches, infrastructure migrations, and marketing events.
 
 </details>
+
+## AWS Organizations
+
+<details>
+<summary><b><i>435.What is "AWS Organizations"?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS Organizations helps you centrally govern your environment as you grow and scale your workloads on AWS.
+
+</details>
+
+<details>
+<summary><b><i>436.What's an OU in regards to AWS Organizations?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+OU (Organizational Units) is a way to group multiple accounts together so you can treat them as a single unit.
+
+By default there is the "Root" OU created in AWS Organizations.
+
+Most of the time OUs are based on functions or common set of controls.
+
+</details>
+
+## Automation
+
+<details>
+<summary><b><i>437.What is AWS CodeDeploy?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CodeDeploy is a fully managed deployment service that automates software deployments to a variety of compute services such as Amazon EC2, AWS Fargate, AWS Lambda, and your on-premises servers.
+
+</details>
+
+<details>
+<summary><b><i>438.Explain what is CloudFormation.</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+AWS CloudFormation is a service that helps you model and set up your Amazon Web Services resources so that you can spend less time managing those resources and more time focusing on your applications that run in AWS. 
+
+You create a template that describes all the AWS resources that you want (like Amazon EC2 instances or Amazon RDS DB instances), and CloudFormation takes care of provisioning and configuring those resources for you.
+
+</details>
+
+<details>
+<summary><b><i>439.What is AWS CDK?</i></b></summary>
+
+$\color{green}{\text{Answer}}$
+
+The AWS Cloud Development Kit (AWS CDK) is an open-source software development framework to define cloud infrastructure as code and provision it through AWS CloudFormation. 
+
+CDK gives the flexibility to use popular programming languages like TypeScript, JavaScript, Python, Java, C# and Go (in Developer Preview) to define your infrastructure, and AWS CDK provides a set of libraries for AWS services that abstract away the need to write raw CloudFormation templates.
+
+</details>
